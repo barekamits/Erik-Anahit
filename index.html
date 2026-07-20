@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Allura&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap');
@@ -93,8 +94,8 @@
             margin-bottom: 30px;
         }
         .name-script {
-            font-family: 'Great Vibes', 'Allura', cursive;
-            font-size: 4.2rem;
+            font-family: 'Alex Brush', cursive;
+            font-size: 4.5rem;
             color: #2c2c2c;
             line-height: 1;
         }
@@ -840,14 +841,14 @@
         <div class="big-date-header">17<span class="sep">|</span>08<span class="sep">|</span>26</div>
 
         <div class="couple-names">
-            <span class="name-script groom">Eric</span>
+            <span class="name-script groom">Erik</span>
             <span class="and-text">and</span>
             <span class="name-script bride">Anahit</span>
         </div>
         
         <div class="couple-photo">
             <div class="photo-placeholder">
-                <img src="z1.jfif">
+                <img src="https://uploads.onecompiler.io/43gpeysj6/1784532945296/z1.jfif">
             </div>
         </div>
         
@@ -857,7 +858,7 @@
                 <div class="front pocket"></div>
                 <!-- ═══ SEAL: add your own wax-seal / monogram image here, or keep the default heart ═══ -->
                 <div class="seal" id="seal">
-                    <img src="wss1.png" alt="Կնիք">
+                    <img src="https://uploads.onecompiler.io/43gpeysj6/1784535804737/wss1.png" alt="Կնիք">
                 </div>
                 <div class="letter">
                     <div class="closing-text">
@@ -876,7 +877,7 @@
                 <span class="float-note n2">&#9835;</span>
                 <span class="float-note n3">&#9834;</span>
             </div>
-            <audio id="bg-music" src="sargisavetisyan" loop></audio>
+            <audio id="bg-music" src="asmunq.mp3.m4a" loop></audio>
             <div class="image">
                 <img src="removedmap.png" alt="Սիրտ">
             </div>
@@ -936,7 +937,7 @@
                 </div>
             </div>
             <div class="ketagic-bg">
-                <img src="z2.jfif" alt="Nkar">
+                <img src="https://uploads.onecompiler.io/43gpeysj6/1784532952790/z2.jfif" alt="Nkar">
             </div>
            <!-- ═══ CALENDAR ═══ -->
 <div class="calendar-container">
@@ -1039,8 +1040,8 @@
     <!-- Ուղարկելու կոճակները իրար կողքի -->
     <div class="dual-button-wrapper">
         <!-- Ավելացրել ենք onclick="submitToPerson(...)" -->
-        <button type="button" class="btn-rsvp btn-send-sargis" onclick="submitToPerson('groom')">Ուղարկել Էրիկին</button>
-        <button type="button" class="btn-rsvp btn-send-mane" onclick="submitToPerson('bride')">Ուղարկել Անահիտին</button>
+        <button type="button" class="btn-rsvp btn-send-sargis" onclick="submitToPerson('groom')">Ուղարկել Արշակին</button>
+        <button type="button" class="btn-rsvp btn-send-mane" onclick="submitToPerson('bride')">Ուղարկել Դիանային</button>
     </div>
 
     <!-- Հաղորդագրությունների հատված -->
@@ -1051,69 +1052,64 @@
         </div>
     </div>
 <script>
-  /* ═══ ENVELOPE + SEAL + MUSIC AUTO-PLAY ═══ */
-        document.addEventListener('DOMContentLoaded', function () {
-            var envelope = document.getElementById('envelope');
-            var seal = document.getElementById('seal');
-            var music = document.getElementById('bg-music');
-            var content = document.getElementById('content');
-            var musicBtn = document.getElementById('music-btn');
-            var isPlaying = false;
+    /* ═══ ENVELOPE + SEAL + MUSIC AUTO-PLAY ═══ */
+    document.addEventListener('DOMContentLoaded', function () {
+        var envelope = document.getElementById('envelope');
+        var seal = document.getElementById('seal');
+        var music = document.getElementById('bg-music');
+        var content = document.getElementById('content');
+        var musicBtn = document.getElementById('music-btn');
+        var isPlaying = false;
 
-            function startMusic() {
-                if (!isPlaying) {
+        function openEnvelope() {
+            if (envelope.classList.contains('close')) {
+                envelope.classList.remove('close');
+                envelope.classList.add('open');
+                setTimeout(function () {
+                    envelope.classList.add('disappear');
+                    content.classList.add('show');
+                    setTimeout(initScrollAnimations, 300);
+    setTimeout(function () {
+                        document.querySelector('.envelope-wrapper').style.display = 'none';
+                    }, 1000);
+                    // ══ Ծրարը բացելուց հետո ավտոմատ նվագել ══
+                    // Նոտաների անիմացիան միացնում ենք անմիջապես, անկախ նրանից՝
+                    // աուդիոն կհաջողվի՞ autoplay անել, թե ոչ (browser-ները հաճախ արգելափակում են)
                     isPlaying = true;
                     musicBtn.classList.add('playing');
                     music.play().catch(function (err) {
+                        // Բրաուզերը արգելել է autoplay-ը — visual notes-ը դեռ երևում են,
+                        // իսկ ձայնը կսկսվի, երբ user-ը սեղմի կոճակին
                         console.warn('Autoplay blocked:', err);
-                        // Եթե autoplay-ն արգելափակված է, օգտատերը կարող է միացնել կոճակով
                     });
+                }, 2500);
+            }
+        }
+
+        // Կնիքին սեղմելը բացում է ծրարը
+        if (seal) {
+            seal.addEventListener('click', function (e) {
+                e.stopPropagation();
+                openEnvelope();
+            });
+        }
+        // Ամբողջ ծրարին սեղմելը նույնպես աշխատում է (fallback)
+        envelope.addEventListener('click', openEnvelope);
+
+        // Music button — play / pause toggle (animated notes)
+        if (musicBtn) {
+            musicBtn.addEventListener('click', function () {
+                if (isPlaying) {
+                    music.pause();
+                    musicBtn.classList.remove('playing');
+                } else {
+                    music.play();
+                    musicBtn.classList.add('playing');
                 }
-            }
-
-            function openEnvelope() {
-                if (envelope.classList.contains('close')) {
-                    // ═══ ԵՐԱԺՇՏՈՒԹՅՈՒՆԸ ՄԻԱՑՆԵԼ ԱՆՄԻՋԱՊԵՍ ═══
-                    startMusic();
-
-                    envelope.classList.remove('close');
-                    envelope.classList.add('open');
-                    setTimeout(function () {
-                        envelope.classList.add('disappear');
-                        content.classList.add('show');
-                        setTimeout(function () {
-                            document.querySelector('.envelope-wrapper').style.display = 'none';
-                        }, 1000);
-                    }, 2500);
-                }
-            }
-
-            // Կնիքին սեղմելը բացում է ծրարը և միացնում երաժշտությունը
-            if (seal) {
-                seal.addEventListener('click', function (e) {
-                    e.stopPropagation();
-                    openEnvelope();
-                });
-            }
-            // Ամբողջ ծրարին սեղմելը
-            envelope.addEventListener('click', openEnvelope);
-
-            // Music button — play / pause toggle (animated notes)
-            if (musicBtn) {
-                musicBtn.addEventListener('click', function () {
-                    if (isPlaying) {
-                        music.pause();
-                        musicBtn.classList.remove('playing');
-                        isPlaying = false;
-                    } else {
-                        music.play();
-                        musicBtn.classList.add('playing');
-                        isPlaying = true;
-                    }
-                });
-            }
-        });
-
+                isPlaying = !isPlaying;
+            });
+        }
+    });
     /* ═══ SCROLL ANIMATIONS ═══ */
     function initScrollAnimations() {
         const wrapper = document.getElementById('locationWrapper');
@@ -1149,73 +1145,64 @@
         }, { threshold: 0.3 });
         if (dressSection) dressObserver.observe(dressSection);
     }
-  /* ═══ RSVP ═══ */
-        (function () {
-            const FORM = document.getElementById('rsvpForm');
-            const OK   = document.getElementById('successMessage');
-            const ERR  = document.getElementById('errorMessage');
-            const ENDPOINT = "https://script.google.com/macros/s/AKfycbxSnkdWLcndjsNKtSctKWD7vfNlTLmXN1OhvJR6BctU9_6BVDjGoPiSjbaQ6f6il17l/exec";
-
+          // RSVP ֆունկցիա
+        window.submitToPerson = function (target) {
+            var form = document.getElementById('rsvpForm');
+            var ok = document.getElementById('successMessage');
+            var err = document.getElementById('errorMessage');
+            
             function showMsg(el, html) {
-                [OK, ERR].forEach(m => {
+                [ok, err].forEach(function(m) {
                     m.style.display = 'none';
                     m.classList.remove('show', 'hide');
                 });
                 el.innerHTML = html;
                 el.style.display = 'block';
-                setTimeout(() => el.classList.add('show'), 10);
-                setTimeout(() => {
+                setTimeout(function() { el.classList.add('show'); }, 10);
+                setTimeout(function() {
                     el.classList.add('hide');
-                    setTimeout(() => {
+                    setTimeout(function() {
                         el.style.display = 'none';
                         el.classList.remove('show', 'hide');
                     }, 500);
-                }, 5000); // Մի փոքր երկարացրի, որ հասցնեն կարդալ
+                }, 5000);
             }
 
-            // Սա այն ֆունկցիան է, որը պետք է կանչել կոճակների onclick-ի ժամանակ
-            window.submitToPerson = function (target) {
-                const first = (FORM.querySelector('[name="firstName"]').value || '').trim();
-                const last  = (FORM.querySelector('[name="lastName"]').value || '').trim();
-                const guests = (FORM.querySelector('[name="guests"]').value || '').trim();
-                const resp = (FORM.querySelector('[name="response"]').value || '').trim();
+            var first = (form.querySelector('[name="firstName"]').value || '').trim();
+            var last  = (form.querySelector('[name="lastName"]').value || '').trim();
+            var guests = (form.querySelector('[name="guests"]').value || '').trim();
+            var resp = (form.querySelector('[name="response"]').value || '').trim();
 
-                if (!first || !last) {
-                    showMsg(ERR, '<div class="message-title">Սխալ</div><div class="message-text">Խնդրում ենք լրացնել անունը և ազգանունը</div>');
-                    return;
-                }
+            if (!first || !last) {
+                showMsg(err, '<div class="message-title">Սխալ</div><div class="message-text">Խնդրում ենք լրացնել անունը և ազգանունը</div>');
+                return;
+            }
 
-                if (!guests || guests < 1) {
-                    showMsg(ERR, '<div class="message-title">Սխալ</div><div class="message-text">Նշեք հյուրերի քանակը</div>');
-                    return;
-                }
+            if (!guests || guests < 1) {
+                showMsg(err, '<div class="message-title">Սխալ</div><div class="message-text">Նշեք հյուրերի քանակը</div>');
+                return;
+            }
 
-                const params = new URLSearchParams();
-                params.append('firstName', first);
-                params.append('lastName', last);
-                params.append('response', resp);
-                params.append('guests', guests);
-                params.append('target', target); // Սարգիս կամ Մանե
-                params.append('timestamp', new Date().toISOString());
+            var params = new URLSearchParams();
+            params.append('firstName', first);
+            params.append('lastName', last);
+            params.append('response', resp);
+            params.append('guests', guests);
+            params.append('target', target);
+            params.append('timestamp', new Date().toISOString());
 
-                fetch(ENDPOINT, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: params.toString()
-                }).catch(err => console.error('RSVP error:', err));
+            fetch("https://script.google.com/macros/s/AKfycbxSnkdWLcndjsNKtSctKWD7vfNlTLmXN1OhvJR6BctU9_6BVDjGoPiSjbaQ6f6il17l/exec", {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: params.toString()
+            }).catch(function(err) { console.error('RSVP error:', err); });
 
-                // Պատասխան հաղորդագրությունը ըստ ընտրված մարդու
-                const personName = (target === 'groom') ? 'Էրիկ' : 'Անահիտ';
-                
-                showMsg(
-                    OK,
-                    `<div class="message-text">Շնորհակալ եմ, ես ստացել եմ Ձեր պատասխանը:<br>Սիրով՝ ${personName}</div>`
-                );
-
-                FORM.reset();
-            };
-        })();
+            var personName = (target === 'groom') ? 'Էրիկ' : 'Անահիտ';
+            showMsg(ok, '<div class="message-text">Շնորհակալ եմ, ես ստացել եմ Ձեր պատասխանը:<br>Սիրով՝ ' + personName + '</div>');
+            form.reset();
+        };
+    });
 </script>
 </body>
 </html>
