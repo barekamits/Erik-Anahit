@@ -1311,67 +1311,74 @@
             }, { threshold: 0.1 });
             if (wrapper) wrapperObserver.observe(wrapper);
         }
+/* ═══ RSVP ═══ */
+(function () {
+    const FORM = document.getElementById('rsvpForm');
+    const OK   = document.getElementById('successMessage');
+    const ERR  = document.getElementById('errorMessage');
+    const ENDPOINT = "https://script.google.com/macros/s/AKfycbxSnkdWLcndjsNKtSctKWD7vfNlTLmXN1OhvJR6BctU9_6BVDjGoPiSjbaQ6f6il17l/exec";
 
-        /* ═══ RSVP ═══ */
-        (function () {
-            const FORM = document.getElementById('rsvpForm');
-            const OK   = document.getElementById('successMessage');
-            const ERR  = document.getElementById('errorMessage');
-            const ENDPOINT = "";
+    function showMsg(el, html) {
+        [OK, ERR].forEach(m => {
+            m.style.display = 'none';
+            m.classList.remove('show', 'hide');
+        });
+        el.innerHTML = html;
+        el.style.display = 'block';
+        setTimeout(() => el.classList.add('show'), 10);
+        setTimeout(() => {
+            el.classList.add('hide');
+            setTimeout(() => {
+                el.style.display = 'none';
+                el.classList.remove('show', 'hide');
+            }, 500);
+        }, 5000); // Մի փոքր երկարացրի, որ հասցնեն կարդալ
+    }
 
-            function showMsg(el, html) {
-                [OK, ERR].forEach(m => {
-                    m.style.display = 'none';
-                    m.classList.remove('show', 'hide');
-                });
-                el.innerHTML = html;
-                el.style.display = 'block';
-                setTimeout(() => el.classList.add('show'), 10);
-                setTimeout(() => {
-                    el.classList.add('hide');
-                    setTimeout(() => {
-                        el.style.display = 'none';
-                        el.classList.remove('show', 'hide');
-                    }, 500);
-                }, 4000);
-            }
+    // Սա այն ֆունկցիան է, որը պետք է կանչել կոճակների onclick-ի ժամանակ
+    window.submitToPerson = function (target) {
+        const first = (FORM.querySelector('[name="firstName"]').value || '').trim();
+        const last  = (FORM.querySelector('[name="lastName"]').value || '').trim();
+        const guests = (FORM.querySelector('[name="guests"]').value || '').trim();
+        const resp = (FORM.querySelector('[name="response"]').value || '').trim();
 
-            window.submitToPerson = function(person) {
-                const first = (FORM.querySelector('[name="firstName"]').value || '').trim();
-                const last  = (FORM.querySelector('[name="lastName"]').value || '').trim();
-                const guests = FORM.querySelector('[name="guests"]').value || '1';
-                const response = FORM.querySelector('[name="response"]').value;
+        if (!first || !last) {
+            showMsg(ERR, '<div class="message-title">Սխալ</div><div class="message-text">Խնդրում ենք լրացնել անունը և ազգանունը</div>');
+            return;
+        }
 
-                if (!first || !last) {
-                    showMsg(ERR, '<div class="message-title">Սխալ</div><div class="message-text">Խնդրում ենք լրացնել անունը և ազգանունը</div>');
-                    return;
-                }
+        if (!guests || guests < 1) {
+            showMsg(ERR, '<div class="message-title">Սխալ</div><div class="message-text">Նշեք հյուրերի քանակը</div>');
+            return;
+        }
 
-                const personName = person === 'groom' ? 'Էրիկին' : 'Անահիտին';
-                const responseText = response === 'Գալիս եմ' 
-                    ? 'Մենք ստացել ենք Ձեր պատասխանը և ուրախ ենք կիսել օրը Ձեզ հետ' 
-                    : 'Շնորհակալ ենք պատասխանի համար';
+        const params = new URLSearchParams();
+        params.append('firstName', first);
+        params.append('lastName', last);
+        params.append('response', resp);
+        params.append('guests', guests);
+        params.append('target', target); // Սարգիս կամ Մանե
+        params.append('timestamp', new Date().toISOString());
 
-                const params = new URLSearchParams();
-                params.append('full_name', `${first} ${last}`);
-                params.append('firstName', first);
-                params.append('lastName', last);
-                params.append('guests', guests);
-                params.append('response', response);
-                params.append('sent_to', person);
-                params.append('timestamp', new Date().toISOString());
+        fetch(ENDPOINT, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: params.toString()
+        }).catch(err => console.error('RSVP error:', err));
 
-                fetch(ENDPOINT, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: params.toString()
-                }).catch(err => console.error('RSVP error:', err));
+        // Պատասխան հաղորդագրությունը ըստ ընտրված մարդու
+        const personName = (target === 'groom') ? 'Սարգիս' : 'Մանե';
+        
+        showMsg(
+            OK,
+            `<div class="message-text">Շնորհակալ եմ, ես ստացել եմ Ձեր պատասխանը:<br>Սիրով՝ ${personName}</div>`
+        );
 
-                showMsg(OK, `<div class="message-title">Շնորհակալություն</div><div class="message-text">${responseText}<br><small>Ուղարկված է ${personName}</small></div>`);
-                FORM.reset();
-            };
-        })();
+        FORM.reset();
+    };
+})();
+     
     </script>
 </body>
 </html>
