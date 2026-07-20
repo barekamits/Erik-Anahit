@@ -729,105 +729,282 @@
             transition: all 0.3s ease;
         }
 
-        @media (max-width: 360px) {
-            .dual-button-wrapper .btn-rsvp {
-                font-size: 11px;
-            }
-        }
-
-        /* ═══ MOBILE ENLARGEMENTS ═══ */
+        /* ═══ ՄՈԲԱՅԼ ԷԿՐԱՆՆԵՐ ═══ */
         @media (max-width: 480px) {
+            /* === ՀԻՄՆԱԿԱՆ ԿՈՆՏԵՅՆԵՐ === */
             .invitation-card {
-                padding: 30px 15px;
+                padding: 20px 12px;
             }
+            
+            /* === ՎԵՐՆԱԳԻՐ === */
             .big-date-header {
-                font-size: 4rem;
+                font-size: 3.8rem;
+                margin-bottom: 25px;
             }
-            .couple-photo {
-                height: 360px;
-            }
+            
+            /* === ԶՈՒՅԳԻ ԱՆՎԱՆՆԵՐ === */
             .name-script {
-                font-size: 5.5rem;
+                font-size: 5.8rem;
+            }
+            .name-script.groom {
+                margin-left: 2%;
+            }
+            .name-script.bride {
+                margin-right: 2%;
+                margin-top: -8px;
             }
             .and-text {
-                font-size: 1rem;
+                font-size: 1.1rem;
+                letter-spacing: 0.3em;
             }
+            
+            /* === ԼՈՒՍԱՆԿԱՐ === */
+            .couple-photo {
+                height: 400px;
+                margin-bottom: 40px;
+            }
+            
+            /* === ԾՐԱՐ === */
+            #envelope {
+                width: 300px;
+                height: 195px;
+                top: -100px;
+            }
+            .flap {
+                border-left: 150px solid transparent;
+                border-right: 150px solid transparent;
+                border-bottom: 88px solid transparent;
+                border-top: 105px solid #7D7D7D;
+            }
+            .pocket {
+                border-left: 150px solid #BEBEBE;
+                border-right: 150px solid #BEBEBE;
+                border-bottom: 97px solid #A9A9A9;
+                border-top: 97px solid transparent;
+            }
+            .seal {
+                width: 65px;
+                height: 65px;
+                top: 82px;
+            }
+            .letter .closing-text {
+                font-size: 22px;
+                gap: 10px;
+            }
+            .heart-outline {
+                width: 28px;
+                height: 28px;
+            }
+            
+            /* === MUSIC TOGGLE === */
+            .music-toggle {
+                width: 70px;
+                height: 54px;
+                margin: -18px auto 14px;
+            }
+            .music-toggle .float-note {
+                font-size: 16px;
+            }
+            
+            /* === ՍԻՐՏԻ ՆԿԱՐ === */
             .image img {
                 width: 100%;
-                height: auto;
-                max-height: 260px;
+                max-height: 280px;
                 object-fit: contain;
             }
+            
+            /* === ՃԱՆԱՊԱՐՀ / LOCATION === */
             .location-wrapper {
-                height: 700px;
+                height: 750px;
+                margin-top: -40px;
             }
+            .path-svg {
+                height: 750px;
+            }
+            #travelPath {
+                d: path("M 200 10 C 320 10, 320 140, 200 150 C 80 160, 80 290, 200 300 C 320 310, 320 440, 200 450 C 80 460, 80 590, 200 630 C 200 630, 200 660, 200 660");
+            }
+            .location-traveler {
+                width: 48px;
+                height: 48px;
+            }
+            .location-traveler svg {
+                width: 48px;
+                height: 48px;
+            }
+            .location-traveler.animate-path {
+                offset-path: path("M 200 10 C 320 10, 320 140, 200 150 C 80 160, 80 290, 200 300 C 320 310, 320 440, 200 450 C 80 460, 80 590, 200 630 C 200 630, 200 660, 200 660");
+                offset-distance: 0%;
+                offset-rotate: 0deg;
+                animation: travelPath 14s ease-in-out forwards;
+            }
+            @keyframes travelPath {
+                0%   { offset-distance: 0%; }
+                7%   { offset-distance: 0%; }
+                30%  { offset-distance: 30%; }
+                38%  { offset-distance: 30%; }
+                55%  { offset-distance: 60%; }
+                63%  { offset-distance: 60%; }
+                80%  { offset-distance: 100%; }
+                100% { offset-distance: 100%; }
+            }
+            
+            /* === ԺԱՄԱՆԱԿԱՑՈՒՅՑ === */
             .schedule-item {
-                max-width: 180px;
-            }
-            .s-title {
-                font-size: 22px;
-            }
-            .s-desc {
-                font-size: 14px;
-                white-space: normal;
+                max-width: 200px;
             }
             .s-time {
                 font-size: 48px;
             }
+            .s-title {
+                font-size: 24px;
+            }
+            .s-desc {
+                font-size: 15px;
+                white-space: normal;
+                line-height: 1.3;
+            }
             .btn-nav {
-                font-size: 12px;
-                padding: 6px 18px;
+                font-size: 13px;
+                padding: 7px 20px;
+            }
+            #stop1 { top: -12px !important; right: calc(50% + 22px) !important; }
+            #stop2 { top: 180px !important; left: calc(50% + 22px) !important; }
+            #stop3 { top: 330px !important; right: calc(50% + 22px) !important; }
+            #stop4 { top: 500px !important; right: calc(6% + 6px) !important; }
+            
+            .stop-dot {
+                width: 16px;
+                height: 16px;
+            }
+            #dot1 { top: 10px !important; }
+            #dot2 { top: 195px !important; }
+            #dot3 { top: 410px !important; }
+            #dot4 { top: 570px !important; }
+            
+            /* === ԵՐԿՐՈՐԴ ԼՈՒՍԱՆԿԱՐ === */
+            .ketagic-bg {
+                margin-top: 30px;
+                border-radius: 16px;
             }
             .ketagic-bg img {
-                width: 100%;
-                height: auto;
+                border-radius: 16px;
             }
+            
+            /* === ՕՐՎԱՑՈՒՅՑ / CALENDAR === */
             .calendar-container {
-                margin-top: 50px;
+                margin-top: 60px;
+                padding-top: 20px;
             }
             .big-date {
-                font-size: 72px;
+                font-size: 80px;
             }
             .month-text {
-                font-size: 38px;
+                font-size: 40px;
+                margin-top: -8px;
+                margin-bottom: 32px;
             }
             table {
-                font-size: 20px;
-                border-spacing: 8px 10px;
+                font-size: 22px;
+                border-spacing: 10px 12px;
+            }
+            th {
+                font-size: 14px;
+                padding: 6px 0 12px;
             }
             td {
-                width: 44px;
-                height: 44px;
+                width: 48px;
+                height: 48px;
             }
             .heart {
-                width: 44px;
-                height: 44px;
+                width: 48px;
+                height: 48px;
+                top: 72%;
+                left: 12%;
             }
             .heart span {
-                font-size: 18px;
+                font-size: 20px;
             }
+            
+            /* === RSVP === */
             #rsvpForm {
+                margin: 50px auto;
                 max-width: 100%;
+                padding: 0 12px;
+            }
+            .name-fields {
+                gap: 18px;
                 padding: 0 10px;
             }
             .name-input {
-                font-size: 18px;
-                padding: 14px 18px;
+                font-size: 20px;
+                padding: 16px 20px;
+                border-radius: 30px;
+            }
+            .rsvp-select {
+                font-size: 20px;
+                padding: 16px 20px;
+            }
+            .dual-button-wrapper {
+                gap: 12px;
+                margin-top: 20px;
             }
             .dual-button-wrapper .btn-rsvp {
-                font-size: 15px;
-                padding: 14px 4px;
+                font-size: 17px;
+                padding: 16px 6px;
+                border-radius: 30px;
             }
+            
+            /* === ՀԱՂՈՐԴԱԳՐՈՒԹՅՈՒՆ === */
             .confirmation-message {
-                max-width: 90%;
+                max-width: 95%;
                 font-size: 20px;
-                padding: 24px 20px;
+                padding: 28px 24px;
+                top: 135px;
+                border-radius: 24px;
             }
             .message-title {
-                font-size: 26px;
+                font-size: 28px;
             }
             .message-text {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .dual-button-wrapper .btn-rsvp {
+                font-size: 14px;
+                padding: 14px 4px;
+            }
+            .big-date-header {
+                font-size: 3.2rem;
+            }
+            .name-script {
+                font-size: 5rem;
+            }
+            .couple-photo {
+                height: 340px;
+            }
+            .s-time {
+                font-size: 40px;
+            }
+            .s-title {
+                font-size: 20px;
+            }
+            table {
                 font-size: 18px;
+                border-spacing: 6px 8px;
+            }
+            td {
+                width: 38px;
+                height: 38px;
+            }
+            .heart {
+                width: 38px;
+                height: 38px;
+            }
+            .heart span {
+                font-size: 16px;
             }
         }
     </style>
