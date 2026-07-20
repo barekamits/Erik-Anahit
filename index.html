@@ -54,25 +54,6 @@
             position: relative;
         }
         
-        /* ═══ NEW HEADER (Nisan / Engagement style, matches reference image) ═══ */
-        .nisan-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.05rem;
-            font-weight: 600;
-            letter-spacing: 0.18em;
-            color: #2c2c2c;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-        .saat-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 0.7rem;
-            font-weight: 500;
-            letter-spacing: 0.14em;
-            color: #4a4a4a;
-            text-transform: uppercase;
-            margin-bottom: 14px;
-        }
         .big-date-header {
             font-family: 'Playfair Display', serif;
             font-size: 3.2rem;
@@ -116,44 +97,6 @@
             color: #6a6a6a;
             align-self: center;
             margin: 2px 0;
-        }
-        /* ═══ (legacy header styles kept in case referenced elsewhere) ═══ */
-        .main-title {
-            font-family: 'Heghnar';
-            font-size: 2.2rem;
-            font-weight: 400;
-            color: #2c2c2c;
-            letter-spacing: 0.1em;
-            margin-bottom: 30px;
-            line-height: 1.2;
-        }
-        .amp {
-            font-family: 'Italianno';
-            font-size: 60px;
-            color: inherit;
-            display: inline-block;
-            line-height: 1;
-        }
-        .date-info {
-            font-family: 'Crafty Girls';
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 60px;
-            font-size: 2.1rem;
-            color: #2c2c2c;
-            font-weight: bold;
-        }
-        
-        .date-info::after {
-            content: '';
-            position: absolute;
-            width: 80%;
-            height: 1px;
-            background-color: #2c2c2c;
-            left: 50%;
-            transform: translateX(-50%);
-            margin-top: 30px;
         }
         
         .couple-photo {
@@ -229,7 +172,6 @@
             top: 76px;
             left: 50%;
             transform: translate(-50%, -50%);
-           
             display: flex;
             align-items: center;
             justify-content: center;
@@ -333,52 +275,52 @@
             display: block;
         }
 
-      /* ═══ MUSIC TOGGLE (animated notes, site color palette) ═══ */
-      .music-toggle {
-          position: relative;
-          width: 60px;
-          height: 46px;
-          margin: -18px auto 10px;
-          cursor: pointer;
-      }
-      .music-toggle .float-note {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          font-size: 13px;
-          color: #5c4a3a;
-          opacity: 0;
-          pointer-events: none;
-          text-shadow: 0 1px 2px rgba(92, 74, 58, 0.25);
-      }
-      .music-toggle.playing .float-note.n1 { animation: floatNote1 2.6s ease-in-out infinite; }
-      .music-toggle.playing .float-note.n2 { animation: floatNote2 2.9s ease-in-out 0.9s infinite; }
-      .music-toggle.playing .float-note.n3 { animation: floatNote3 2.4s ease-in-out 1.7s infinite; }
-      @keyframes floatNote1 {
-          0%   { opacity: 0; transform: translate(-10px, 0px) rotate(-8deg) scale(0.7); }
-          18%  { opacity: 1; }
-          75%  { opacity: 0.65; }
-          100% { opacity: 0; transform: translate(-30px, -58px) rotate(-22deg) scale(1.05); }
-      }
-      @keyframes floatNote2 {
-          0%   { opacity: 0; transform: translate(0px, 2px) rotate(0deg) scale(0.7); }
-          18%  { opacity: 1; }
-          75%  { opacity: 0.65; }
-          100% { opacity: 0; transform: translate(2px, -60px) rotate(6deg) scale(1.05); }
-      }
-      @keyframes floatNote3 {
-          0%   { opacity: 0; transform: translate(8px, 0px) rotate(6deg) scale(0.7); }
-          18%  { opacity: 1; }
-          75%  { opacity: 0.65; }
-          100% { opacity: 0; transform: translate(28px, -58px) rotate(18deg) scale(1.05); }
-      }
+        /* ═══ MUSIC TOGGLE (animated notes, site color palette) ═══ */
+        .music-toggle {
+            position: relative;
+            width: 60px;
+            height: 46px;
+            margin: -18px auto 10px;
+            cursor: pointer;
+        }
+        .music-toggle .float-note {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 13px;
+            color: #5c4a3a;
+            opacity: 0;
+            pointer-events: none;
+            text-shadow: 0 1px 2px rgba(92, 74, 58, 0.25);
+        }
+        .music-toggle.playing .float-note.n1 { animation: floatNote1 2.6s ease-in-out infinite; }
+        .music-toggle.playing .float-note.n2 { animation: floatNote2 2.9s ease-in-out 0.9s infinite; }
+        .music-toggle.playing .float-note.n3 { animation: floatNote3 2.4s ease-in-out 1.7s infinite; }
+        @keyframes floatNote1 {
+            0%   { opacity: 0; transform: translate(-10px, 0px) rotate(-8deg) scale(0.7); }
+            18%  { opacity: 1; }
+            75%  { opacity: 0.65; }
+            100% { opacity: 0; transform: translate(-30px, -58px) rotate(-22deg) scale(1.05); }
+        }
+        @keyframes floatNote2 {
+            0%   { opacity: 0; transform: translate(0px, 2px) rotate(0deg) scale(0.7); }
+            18%  { opacity: 1; }
+            75%  { opacity: 0.65; }
+            100% { opacity: 0; transform: translate(2px, -60px) rotate(6deg) scale(1.05); }
+        }
+        @keyframes floatNote3 {
+            0%   { opacity: 0; transform: translate(8px, 0px) rotate(6deg) scale(0.7); }
+            18%  { opacity: 1; }
+            75%  { opacity: 0.65; }
+            100% { opacity: 0; transform: translate(28px, -58px) rotate(18deg) scale(1.05); }
+        }
 
-      .image img {
-          width: 300px;
-          height: 200px;
-          cursor: pointer;
-         margin-top: -10px;
-      }
+        .image img {
+            width: 300px;
+            height: 200px;
+            cursor: pointer;
+            margin-top: -10px;
+        }
         /* ═══ LOCATION PATH ═══ */
         .location-wrapper {
             position: relative;
@@ -513,58 +455,53 @@
             color: white;
             border-color: #5c4a3a;
         }
-         /* Stop 1 հատուկ դասավորություն */
-            #stop1 {
-              text-align: center;
-            }
-            #stop1 .s-title {
-              white-space: nowrap; /* որ Տոնական Խնջույք-ը չիջնի նոր տող */
-            }
-            #stop1 .s-desc {
-              text-align: center;
-              margin-top: 4px;
-            }
-            #stop1 .btn-nav {
-              display: inline-block;
-              margin-top: 8px;
-            }
-        /* Stop 2 հատուկ դասավորություն */
-        #stop2 {
-          top: 160px !important;
-          left: calc(50% + 5px) !important;
+        #stop1 {
+            text-align: center;
         }
-        /* Stop 4 հատուկ դասավորություն */
+        #stop1 .s-title {
+            white-space: nowrap;
+        }
+        #stop1 .s-desc {
+            text-align: center;
+            margin-top: 4px;
+        }
+        #stop1 .btn-nav {
+            display: inline-block;
+            margin-top: 8px;
+        }
+        #stop2 {
+            top: 160px !important;
+            left: calc(50% + 5px) !important;
+        }
         #stop3 {
-          text-align: center;
+            text-align: center;
         }
         #stop3 .s-title {
-          white-space: nowrap; /* որ Տոնական Խնջույք-ը չիջնի նոր տող */
+            white-space: nowrap;
         }
         #stop3 .s-desc {
-          text-align: center;
-          margin-top: 4px;
+            text-align: center;
+            margin-top: 4px;
         }
         #stop3 .btn-nav {
-          display: inline-block;
-          margin-top: 8px;
+            display: inline-block;
+            margin-top: 8px;
         }
-        /* Stop 4 հատուկ դասավորություն */
         #stop4 {
-          left: auto !important;
-          right: calc(8% + 4px) !important;
-          text-align: right; /* որ տեքստը ճիշտ դասավորվի */
+            left: auto !important;
+            right: calc(8% + 4px) !important;
+            text-align: right;
         }
-        
         #stop4 .s-title {
-          white-space: nowrap; /* որ Տոնական Խնջույք-ը չիջնի նոր տող */
+            white-space: nowrap;
         }
         #stop4 .s-desc {
-          text-align: center;
-          margin-top: 4px;
+            text-align: center;
+            margin-top: 4px;
         }
         #stop4 .btn-nav {
-          display: inline-block;
-          margin-top: 8px;
+            display: inline-block;
+            margin-top: 8px;
         }
         /* ═══ COUPLE 2 PHOTO ═══ */
         .ketagic-bg {
@@ -655,7 +592,6 @@
             color: #2c3e50;
         }
         /* ═══ RSVP ═══ */
-          /* ═══ RSVP ═══ */
         #rsvpForm {
             margin: 40px auto;
             width: 100%;
@@ -689,14 +625,6 @@
             box-shadow: 0 0 0 2px rgba(76, 71, 49, 0.1);
         }
 
-        .button-wrapper {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            align-items: center;
-        }
-
         .btn-rsvp {
             font-size: 18px;
             color: white;
@@ -707,9 +635,6 @@
             transition: all 0.3s ease;
             text-decoration: none;
         }
-
-        .btn-yes { background-color: #4c4731; }
-        .btn-no  { background-color: #7b685b; }
 
         .btn-rsvp:hover {
             opacity: 0.9;
@@ -774,63 +699,40 @@
             font-size: 16px;
             line-height: 1.4;
         }
-    /* Ընտրության դաշտի ոճը, որ համապատասխանի մյուս input-ներին */
-.rsvp-select {
-    width: 100%;
-    cursor: pointer;
-    background-color: transparent; /* Կամ քո դիզայնի գույնը */
-    outline: none;
-}
 
-.dual-button-wrapper {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px; /* Մի փոքր քչացրի արանքը, որ տեղ բացվի */
-    margin-top: 15px;
-    width: 100%;
-}
+        .rsvp-select {
+            width: 100%;
+            cursor: pointer;
+            background-color: transparent;
+            outline: none;
+        }
 
-.dual-button-wrapper .btn-rsvp {
-    flex: 1;
-    padding: 12px 2px; /* Կողքերից պադինգը քչացրի */
-    
-    /* 👇 Այս տողերը կօգնեն տեղավորել տեքստը */
-    font-size: 13px;      /* Մի փոքր փոքրացրու, եթե դեռ չի տեղավորվում */
-    white-space: nowrap;  /* Արգելում է տեքստին անցնել հաջորդ տող */
-    letter-spacing: -0.5px; /* Տառերի արանքը մի փոքր սեղմում է */
-    
-    cursor: pointer;
-    text-align: center;
-    border: 1px solid #ccc;
-    background-color: #4c4731;
-    color: #fff;
-    transition: all 0.3s ease;
-}
+        .dual-button-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            margin-top: 15px;
+            width: 100%;
+        }
 
-/* Եթե շատ նեղ էկրան է (օրինակ հին հեռախոսներ), կարող ես օգտագործել սա */
-@media (max-width: 360px) {
-    .dual-button-wrapper .btn-rsvp {
-        font-size: 11px;
-    }
-}
-        @keyframes slideInFromTop {
-            from { opacity: 0; transform: translateX(-50%) translateY(-100px); }
-            to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+        .dual-button-wrapper .btn-rsvp {
+            flex: 1;
+            padding: 12px 2px;
+            font-size: 13px;
+            white-space: nowrap;
+            letter-spacing: -0.5px;
+            cursor: pointer;
+            text-align: center;
+            border: 1px solid #ccc;
+            background-color: #4c4731;
+            color: #fff;
+            transition: all 0.3s ease;
         }
-        @keyframes slideOutToTop {
-            from { opacity: 1; transform: translateX(-50%) translateY(0); }
-            to   { opacity: 0; transform: translateX(-50%) translateY(-100px); }
-        }
-        .message-title {
-            font-family: 'Vrdznagir', sans-serif;
-            font-size: 22px;
-            margin-bottom: 8px;
-            color: #4c4731;
-        }
-        .message-text {
-            font-family: 'Vrdznagir', sans-serif;
-            font-size: 16px;
-            line-height: 1.4;
+
+        @media (max-width: 360px) {
+            .dual-button-wrapper .btn-rsvp {
+                font-size: 11px;
+            }
         }
 
         /* ═══ MOBILE ENLARGEMENTS ═══ */
@@ -932,8 +834,6 @@
 </head>
 <body>
     <div class="invitation-card">
-        <!-- ═══ NEW HEADER (matches reference image: NİŞANIMIZA HOŞGELDİNİZ / SAAT 18:00 / 25|03|26 / Mert and Deniz) ═══ -->
-  
         <div class="big-date-header">17<span class="sep">|</span>08<span class="sep">|</span>26</div>
 
         <div class="couple-names">
@@ -952,7 +852,6 @@
             <div id="envelope" class="close">
                 <div class="front flap"></div>
                 <div class="front pocket"></div>
-                <!-- ═══ SEAL: add your own wax-seal / monogram image here, or keep the default heart ═══ -->
                 <div class="seal" id="seal">
                     <img src="https://uploads.onecompiler.io/43gpeysj6/1784535804737/wss1.png" alt="Կնիք">
                 </div>
@@ -1035,273 +934,254 @@
             <div class="ketagic-bg">
                 <img src="https://uploads.onecompiler.io/43gpeysj6/1784532952790/z2.jfif" alt="Nkar">
             </div>
-           <!-- ═══ CALENDAR ═══ -->
-<div class="calendar-container">
-    <p class="big-date">17/08</p>
-    <p class="month-text">17 Օգոստոսի, 2026</p>
+            <!-- ═══ CALENDAR ═══ -->
+            <div class="calendar-container">
+                <p class="big-date">17/08</p>
+                <p class="month-text">17 Օգոստոսի, 2026</p>
 
-    <table>
-        <tr>
-            <th>Mon</th>
-            <th>Tue</th>
-            <th>Wed</th>
-            <th>Thu</th>
-            <th>Fri</th>
-            <th>Sat</th>
-            <th>Sun</th>
-        </tr>
-
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>1</td>
-            <td>2</td>
-        </tr>
-
-        <tr>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-        </tr>
-
-        <tr>
-            <td>10</td>
-            <td>11</td>
-            <td>12</td>
-            <td>13</td>
-            <td>14</td>
-            <td>15</td>
-            <td>16</td>
-        </tr>
-
-        <tr>
-            <td class="heart">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 21s-6-4.35-9-8.7C-1.5 6.6 4.5 0 12 5.25
-                             19.5 0 25.5 6.6 21 12.3c-3 4.35-9 8.7-9 8.7z"/>
-                </svg>
-                <span>17</span>
-            </td>
-            <td>18</td>
-            <td>19</td>
-            <td>20</td>
-            <td>21</td>
-            <td>22</td>
-            <td>23</td>
-        </tr>
-
-        <tr>
-            <td>24</td>
-            <td>25</td>
-            <td>26</td>
-            <td>27</td>
-            <td>28</td>
-            <td>29</td>
-            <td>30</td>
-        </tr>
-
-        <tr>
-            <td>31</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-</div>
+                <table>
+                    <tr>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                        <th>Sun</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td class="heart">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 21s-6-4.35-9-8.7C-1.5 6.6 4.5 0 12 5.25
+                                         19.5 0 25.5 6.6 21 12.3c-3 4.35-9 8.7-9 8.7z"/>
+                            </svg>
+                            <span>17</span>
+                        </td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
             <!-- ═══ RSVP FORM ═══ -->
-           <form id="rsvpForm" class="name-fields">
-    <!-- Տվյալների դաշտեր -->
-    <input type="text" name="firstName" class="name-input" placeholder="Անուն" required>
-    <input type="text" name="lastName" class="name-input" placeholder="Ազգանուն" required>
-    
-    <!-- Հյուրերի քանակ -->
-    <input type="number" name="guests" class="name-input" placeholder="Հյուրերի քանակ" min="1" max="10">
+            <form id="rsvpForm" class="name-fields">
+                <input type="text" name="firstName" class="name-input" placeholder="Անուն" required>
+                <input type="text" name="lastName" class="name-input" placeholder="Ազգանուն" required>
+                <input type="number" name="guests" class="name-input" placeholder="Հյուրերի քանակ" min="1" max="10">
+                <select name="response" class="name-input rsvp-select">
+                    <option value="Գալիս եմ">Գալիս եմ</option>
+                    <option value="Չեմ գալիս">Չեմ գալիս</option>
+                </select>
 
-    <!-- Պատասխանի ընտրության դաշտ -->
-    <select name="response" class="name-input rsvp-select">
-        <option value="Գալիս եմ">Գալիս եմ</option>
-        <option value="Չեմ գալիս">Չեմ գալիս</option>
-    </select>
+                <div class="dual-button-wrapper">
+                    <button type="button" class="btn-rsvp btn-send-sargis" onclick="submitToPerson('groom')">Ուղարկել Էրիկին</button>
+                    <button type="button" class="btn-rsvp btn-send-mane" onclick="submitToPerson('bride')">Ուղարկել Անահիտին</button>
+                </div>
 
-    <!-- Ուղարկելու կոճակները իրար կողքի -->
-    <div class="dual-button-wrapper">
-        <!-- Ավելացրել ենք onclick="submitToPerson(...)" -->
-        <button type="button" class="btn-rsvp btn-send-sargis" onclick="submitToPerson('groom')">Ուղարկել Էրիկին</button>
-        <button type="button" class="btn-rsvp btn-send-mane" onclick="submitToPerson('bride')">Ուղարկել Անահիտին</button>
-    </div>
-
-    <!-- Հաղորդագրությունների հատված -->
-    <div class="confirmation-message" id="successMessage" style="display:none;"></div>
-    <div class="confirmation-message error-message" id="errorMessage" style="display:none;"></div>
-</form>
-
+                <div class="confirmation-message" id="successMessage" style="display:none;"></div>
+                <div class="confirmation-message error-message" id="errorMessage" style="display:none;"></div>
+            </form>
         </div>
     </div>
-<script>
-    /* ═══ ENVELOPE + SEAL + MUSIC AUTO-PLAY ═══ */
-    document.addEventListener('DOMContentLoaded', function () {
-        var envelope = document.getElementById('envelope');
-        var seal = document.getElementById('seal');
-        var music = document.getElementById('bg-music');
-        var content = document.getElementById('content');
-        var musicBtn = document.getElementById('music-btn');
-        var isPlaying = false;
 
-        function openEnvelope() {
-            if (envelope.classList.contains('close')) {
-                envelope.classList.remove('close');
-                envelope.classList.add('open');
-                setTimeout(function () {
-                    envelope.classList.add('disappear');
-                    content.classList.add('show');
-                    setTimeout(initScrollAnimations, 300);
-    setTimeout(function () {
-                        document.querySelector('.envelope-wrapper').style.display = 'none';
-                    }, 1000);
-                    // ══ Ծրարը բացելուց հետո ավտոմատ նվագել ══
-                    // Նոտաների անիմացիան միացնում ենք անմիջապես, անկախ նրանից՝
-                    // աուդիոն կհաջողվի՞ autoplay անել, թե ոչ (browser-ները հաճախ արգելափակում են)
+    <script>
+        /* ═══ ENVELOPE + SEAL + MUSIC AUTO-PLAY ═══ */
+        document.addEventListener('DOMContentLoaded', function () {
+            var envelope = document.getElementById('envelope');
+            var seal = document.getElementById('seal');
+            var music = document.getElementById('bg-music');
+            var content = document.getElementById('content');
+            var musicBtn = document.getElementById('music-btn');
+            var isPlaying = false;
+
+            function startMusic() {
+                if (!isPlaying) {
                     isPlaying = true;
                     musicBtn.classList.add('playing');
                     music.play().catch(function (err) {
-                        // Բրաուզերը արգելել է autoplay-ը — visual notes-ը դեռ երևում են,
-                        // իսկ ձայնը կսկսվի, երբ user-ը սեղմի կոճակին
                         console.warn('Autoplay blocked:', err);
+                        // Եթե autoplay-ն արգելափակված է, օգտատերը կարող է միացնել կոճակով
                     });
-                }, 2500);
+                }
             }
-        }
 
-        // Կնիքին սեղմելը բացում է ծրարը
-        if (seal) {
-            seal.addEventListener('click', function (e) {
-                e.stopPropagation();
-                openEnvelope();
-            });
-        }
-        // Ամբողջ ծրարին սեղմելը նույնպես աշխատում է (fallback)
-        envelope.addEventListener('click', openEnvelope);
+            function openEnvelope() {
+                if (envelope.classList.contains('close')) {
+                    // ═══ ԵՐԱԺՇՏՈՒԹՅՈՒՆԸ ՄԻԱՑՆԵԼ ԱՆՄԻՋԱՊԵՍ ═══
+                    startMusic();
 
-        // Music button — play / pause toggle (animated notes)
-        if (musicBtn) {
-            musicBtn.addEventListener('click', function () {
-                if (isPlaying) {
-                    music.pause();
-                    musicBtn.classList.remove('playing');
-                } else {
-                    music.play();
-                    musicBtn.classList.add('playing');
+                    envelope.classList.remove('close');
+                    envelope.classList.add('open');
+                    setTimeout(function () {
+                        envelope.classList.add('disappear');
+                        content.classList.add('show');
+                        setTimeout(initScrollAnimations, 300);
+                        setTimeout(function () {
+                            document.querySelector('.envelope-wrapper').style.display = 'none';
+                        }, 1000);
+                    }, 2500);
                 }
-                isPlaying = !isPlaying;
-            });
-        }
-    });
-    /* ═══ SCROLL ANIMATIONS ═══ */
-    function initScrollAnimations() {
-        const wrapper = document.getElementById('locationWrapper');
-        const icon = document.getElementById('locationIcon');
-        const wrapperObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    icon.classList.add('playing');
-                    const delays = [200, 4000, 7000, 10000];
-                    const items = ['stop1', 'stop2', 'stop3', 'stop4'];
-                    const dots  = ['dot1',  'dot2',  'dot3',  'dot4'];
-                    items.forEach((id, i) => {
-                        setTimeout(() => {
-                            document.getElementById(id).classList.add('visible');
-                            document.getElementById(dots[i]).classList.add('visible');
-                        }, delays[i]);
-                    });
-                    wrapperObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-        if (wrapper) wrapperObserver.observe(wrapper);
-        const dressSection = document.querySelector('.dress-code');
-        const dressObserver = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.querySelector('.dress-title').classList.add('animate');
-                    entry.target.querySelector('.dress-text').classList.add('animate');
-                    entry.target.querySelectorAll('.dress-colors span').forEach(span => span.classList.add('animate'));
-                    dressObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.3 });
-        if (dressSection) dressObserver.observe(dressSection);
-    }
-    /* ═══ RSVP ═══ */
-    (function () {
-        const FORM = document.getElementById('rsvpForm');
-        const OK   = document.getElementById('successMessage');
-        const ERR  = document.getElementById('errorMessage');
-        const ENDPOINT = "";
-        function showMsg(el, html) {
-            [OK, ERR].forEach(m => {
-                m.style.display = 'none';
-                m.classList.remove('show', 'hide');
-            });
-            el.innerHTML = html;
-            el.style.display = 'block';
-            setTimeout(() => el.classList.add('show'), 10);
-            setTimeout(() => {
-                el.classList.add('hide');
-                setTimeout(() => {
-                    el.style.display = 'none';
-                    el.classList.remove('show', 'hide');
-                }, 500);
-            }, 4000);
-        }
-        FORM.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const first = (FORM.querySelector('[name="firstName"]').value || '').trim();
-            const last  = (FORM.querySelector('[name="lastName"]').value || '').trim();
-            if (!first || !last) {
-                showMsg(ERR, '<div class="message-title">Skhal</div><div class="message-text">Khndrum enq lracnel anune ev azganuny</div>');
-                return;
             }
-            const resp = (document.getElementById('responseInput').value || '').trim();
-            if (!resp) {
-                showMsg(ERR, '<div class="message-title">Skhal</div><div class="message-text">Yntrek galis ek, te voch</div>');
-                return;
+
+            // Կնիքին սեղմելը բացում է ծրարը և միացնում երաժշտությունը
+            if (seal) {
+                seal.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    openEnvelope();
+                });
             }
-            const params = new URLSearchParams();
-            params.append('full_name', `${first} ${last}`);
-            params.append('firstName', first);
-            params.append('lastName', last);
-            params.append('response', resp);
-            params.append('attend', resp);
-            params.append('timestamp', new Date().toISOString());
-            fetch(ENDPOINT, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: params.toString()
-            }).catch(err => console.error('RSVP error:', err));
-            const responseText = resp === 'Գալիս եմ'
-                ? 'Մենք ստացել ենք Ձեր պատասխանը և ուրախ ենք կիսել օրը Ձեզ հետ'
-                : 'Շնորհակալ ենք պատասխանի համար';
-            showMsg(OK, '<div class="message-title">Shnorhakalutyun</div>' + `<div class="message-text">${responseText}</div>`);
-            FORM.reset();
-            document.getElementById('responseInput').value = '';
+            // Ամբողջ ծրարին սեղմելը
+            envelope.addEventListener('click', openEnvelope);
+
+            // Music button — play / pause toggle (animated notes)
+            if (musicBtn) {
+                musicBtn.addEventListener('click', function () {
+                    if (isPlaying) {
+                        music.pause();
+                        musicBtn.classList.remove('playing');
+                        isPlaying = false;
+                    } else {
+                        music.play();
+                        musicBtn.classList.add('playing');
+                        isPlaying = true;
+                    }
+                });
+            }
         });
-        window.setResponseAndSubmit = function (answer) {
-            document.getElementById('responseInput').value = answer;
-            if (FORM.requestSubmit) FORM.requestSubmit();
-            else FORM.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
-        };
-    })();
-</script>
+
+        /* ═══ SCROLL ANIMATIONS ═══ */
+        function initScrollAnimations() {
+            const wrapper = document.getElementById('locationWrapper');
+            const icon = document.getElementById('locationIcon');
+            const wrapperObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        icon.classList.add('playing');
+                        const delays = [200, 4000, 7000, 10000];
+                        const items = ['stop1', 'stop2', 'stop3', 'stop4'];
+                        const dots  = ['dot1',  'dot2',  'dot3',  'dot4'];
+                        items.forEach((id, i) => {
+                            setTimeout(() => {
+                                document.getElementById(id).classList.add('visible');
+                                document.getElementById(dots[i]).classList.add('visible');
+                            }, delays[i]);
+                        });
+                        wrapperObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            if (wrapper) wrapperObserver.observe(wrapper);
+        }
+
+        /* ═══ RSVP ═══ */
+        (function () {
+            const FORM = document.getElementById('rsvpForm');
+            const OK   = document.getElementById('successMessage');
+            const ERR  = document.getElementById('errorMessage');
+            const ENDPOINT = "";
+
+            function showMsg(el, html) {
+                [OK, ERR].forEach(m => {
+                    m.style.display = 'none';
+                    m.classList.remove('show', 'hide');
+                });
+                el.innerHTML = html;
+                el.style.display = 'block';
+                setTimeout(() => el.classList.add('show'), 10);
+                setTimeout(() => {
+                    el.classList.add('hide');
+                    setTimeout(() => {
+                        el.style.display = 'none';
+                        el.classList.remove('show', 'hide');
+                    }, 500);
+                }, 4000);
+            }
+
+            window.submitToPerson = function(person) {
+                const first = (FORM.querySelector('[name="firstName"]').value || '').trim();
+                const last  = (FORM.querySelector('[name="lastName"]').value || '').trim();
+                const guests = FORM.querySelector('[name="guests"]').value || '1';
+                const response = FORM.querySelector('[name="response"]').value;
+
+                if (!first || !last) {
+                    showMsg(ERR, '<div class="message-title">Սխալ</div><div class="message-text">Խնդրում ենք լրացնել անունը և ազգանունը</div>');
+                    return;
+                }
+
+                const personName = person === 'groom' ? 'Էրիկին' : 'Անահիտին';
+                const responseText = response === 'Գալիս եմ' 
+                    ? 'Մենք ստացել ենք Ձեր պատասխանը և ուրախ ենք կիսել օրը Ձեզ հետ' 
+                    : 'Շնորհակալ ենք պատասխանի համար';
+
+                // Ուղարկել տվյալները
+                const params = new URLSearchParams();
+                params.append('full_name', `${first} ${last}`);
+                params.append('firstName', first);
+                params.append('lastName', last);
+                params.append('guests', guests);
+                params.append('response', response);
+                params.append('sent_to', person);
+                params.append('timestamp', new Date().toISOString());
+
+                fetch(ENDPOINT, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: params.toString()
+                }).catch(err => console.error('RSVP error:', err));
+
+                showMsg(OK, `<div class="message-title">Շնորհակալություն</div><div class="message-text">${responseText}<br><small>Ուղարկված է ${personName}</small></div>`);
+                FORM.reset();
+            };
+        })();
+    </script>
 </body>
 </html>
