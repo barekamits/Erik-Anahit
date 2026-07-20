@@ -1040,8 +1040,8 @@
     <!-- Ուղարկելու կոճակները իրար կողքի -->
     <div class="dual-button-wrapper">
         <!-- Ավելացրել ենք onclick="submitToPerson(...)" -->
-        <button type="button" class="btn-rsvp btn-send-sargis" onclick="submitToPerson('groom')">Ուղարկել Արշակին</button>
-        <button type="button" class="btn-rsvp btn-send-mane" onclick="submitToPerson('bride')">Ուղարկել Դիանային</button>
+        <button type="button" class="btn-rsvp btn-send-sargis" onclick="submitToPerson('groom')">Ուղարկել Էրիկին</button>
+        <button type="button" class="btn-rsvp btn-send-mane" onclick="submitToPerson('bride')">Ուղարկել Անահիտին</button>
     </div>
 
     <!-- Հաղորդագրությունների հատված -->
@@ -1069,17 +1069,13 @@
                     envelope.classList.add('disappear');
                     content.classList.add('show');
                     setTimeout(initScrollAnimations, 300);
-    setTimeout(function () {
+                    setTimeout(function () {
                         document.querySelector('.envelope-wrapper').style.display = 'none';
                     }, 1000);
                     // ══ Ծրարը բացելուց հետո ավտոմատ նվագել ══
-                    // Նոտաների անիմացիան միացնում ենք անմիջապես, անկախ նրանից՝
-                    // աուդիոն կհաջողվի՞ autoplay անել, թե ոչ (browser-ները հաճախ արգելափակում են)
                     isPlaying = true;
                     musicBtn.classList.add('playing');
                     music.play().catch(function (err) {
-                        // Բրաուզերը արգելել է autoplay-ը — visual notes-ը դեռ երևում են,
-                        // իսկ ձայնը կսկսվի, երբ user-ը սեղմի կոճակին
                         console.warn('Autoplay blocked:', err);
                     });
                 }, 2500);
@@ -1145,64 +1141,67 @@
         }, { threshold: 0.3 });
         if (dressSection) dressObserver.observe(dressSection);
     }
-          // RSVP ֆունկցիա
-        window.submitToPerson = function (target) {
-            var form = document.getElementById('rsvpForm');
-            var ok = document.getElementById('successMessage');
-            var err = document.getElementById('errorMessage');
-            
-            function showMsg(el, html) {
-                [ok, err].forEach(function(m) {
-                    m.style.display = 'none';
-                    m.classList.remove('show', 'hide');
-                });
-                el.innerHTML = html;
-                el.style.display = 'block';
-                setTimeout(function() { el.classList.add('show'); }, 10);
+
+    // RSVP ֆունկցիա
+    function submitToPerson(target) {
+        var form = document.getElementById('rsvpForm');
+        var ok = document.getElementById('successMessage');
+        var err = document.getElementById('errorMessage');
+        
+        function showMsg(el, html) {
+            [ok, err].forEach(function(m) {
+                m.style.display = 'none';
+                m.classList.remove('show', 'hide');
+            });
+            el.innerHTML = html;
+            el.style.display = 'block';
+            setTimeout(function() { el.classList.add('show'); }, 10);
+            setTimeout(function() {
+                el.classList.add('hide');
                 setTimeout(function() {
-                    el.classList.add('hide');
-                    setTimeout(function() {
-                        el.style.display = 'none';
-                        el.classList.remove('show', 'hide');
-                    }, 500);
-                }, 5000);
-            }
+                    el.style.display = 'none';
+                    el.classList.remove('show', 'hide');
+                }, 500);
+            }, 5000);
+        }
 
-            var first = (form.querySelector('[name="firstName"]').value || '').trim();
-            var last  = (form.querySelector('[name="lastName"]').value || '').trim();
-            var guests = (form.querySelector('[name="guests"]').value || '').trim();
-            var resp = (form.querySelector('[name="response"]').value || '').trim();
+        var first = (form.querySelector('[name="firstName"]').value || '').trim();
+        var last  = (form.querySelector('[name="lastName"]').value || '').trim();
+        var guests = (form.querySelector('[name="guests"]').value || '').trim();
+        var resp = (form.querySelector('[name="response"]').value || '').trim();
 
-            if (!first || !last) {
-                showMsg(err, '<div class="message-title">Սխալ</div><div class="message-text">Խնդրում ենք լրացնել անունը և ազգանունը</div>');
-                return;
-            }
+        if (!first || !last) {
+            showMsg(err, '<div class="message-title">Սխալ</div><div class="message-text">Խնդրում ենք լրացնել անունը և ազգանունը</div>');
+            return;
+        }
 
-            if (!guests || guests < 1) {
-                showMsg(err, '<div class="message-title">Սխալ</div><div class="message-text">Նշեք հյուրերի քանակը</div>');
-                return;
-            }
+        if (!guests || guests < 1) {
+            showMsg(err, '<div class="message-title">Սխալ</div><div class="message-text">Նշեք հյուրերի քանակը</div>');
+            return;
+        }
 
-            var params = new URLSearchParams();
-            params.append('firstName', first);
-            params.append('lastName', last);
-            params.append('response', resp);
-            params.append('guests', guests);
-            params.append('target', target);
-            params.append('timestamp', new Date().toISOString());
+        var params = new URLSearchParams();
+        params.append('firstName', first);
+        params.append('lastName', last);
+        params.append('response', resp);
+        params.append('guests', guests);
+        params.append('target', target);
+        params.append('timestamp', new Date().toISOString());
 
-            fetch("https://script.google.com/macros/s/AKfycbxSnkdWLcndjsNKtSctKWD7vfNlTLmXN1OhvJR6BctU9_6BVDjGoPiSjbaQ6f6il17l/exec", {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: params.toString()
-            }).catch(function(err) { console.error('RSVP error:', err); });
+        fetch("https://script.google.com/macros/s/AKfycbxSnkdWLcndjsNKtSctKWD7vfNlTLmXN1OhvJR6BctU9_6BVDjGoPiSjbaQ6f6il17l/exec", {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: params.toString()
+        }).catch(function(err) { console.error('RSVP error:', err); });
 
-            var personName = (target === 'groom') ? 'Էրիկ' : 'Անահիտ';
-            showMsg(ok, '<div class="message-text">Շնորհակալ եմ, ես ստացել եմ Ձեր պատասխանը:<br>Սիրով՝ ' + personName + '</div>');
-            form.reset();
-        };
-    });
+        var personName = (target === 'groom') ? 'Էրիկ' : 'Անահիտ';
+        showMsg(ok, '<div class="message-text">Շնորհակալ եմ, ես ստացել եմ Ձեր պատասխանը:<br>Սիրով՝ ' + personName + '</div>');
+        form.reset();
+    }
+
+    // Կարևոր է` ֆունկցիան global լինի, որ onclick-ը աշխատի
+    window.submitToPerson = submitToPerson;
 </script>
 </body>
 </html>
