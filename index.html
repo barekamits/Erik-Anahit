@@ -179,14 +179,14 @@
             cursor: pointer;
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
-        .seal:hover {
-            transform: translate(-50%, -50%) scale(1.06);
-        }
         .seal img {
             width: 100%;
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
+        }
+        .seal:hover {
+            transform: translate(-50%, -50%) scale(1.06);
         }
         .open .seal,
         .disappear .seal {
@@ -275,7 +275,7 @@
             display: block;
         }
 
-        /* ═══ MUSIC TOGGLE (animated notes, site color palette) ═══ */
+        /* ═══ MUSIC TOGGLE ═══ */
         .music-toggle {
             position: relative;
             width: 60px;
@@ -729,282 +729,301 @@
             transition: all 0.3s ease;
         }
 
-        /* ═══ ՄՈԲԱՅԼ ԷԿՐԱՆՆԵՐ ═══ */
+        /* ═══ ՄՈԲԱՅԼ ԷԿՐԱՆՆԵՐ - ԱՎԵԼԻ ՄԵԾ ═══ */
         @media (max-width: 480px) {
-            /* === ՀԻՄՆԱԿԱՆ ԿՈՆՏԵՅՆԵՐ === */
+            /* === ՀԻՄՆԱԿԱՆ === */
             .invitation-card {
-                padding: 20px 12px;
+                padding: 15px 10px;
+                max-width: 100%;
             }
             
             /* === ՎԵՐՆԱԳԻՐ === */
             .big-date-header {
-                font-size: 3.8rem;
-                margin-bottom: 25px;
+                font-size: 5rem !important;
+                margin-bottom: 30px;
+                letter-spacing: 0.1em;
+            }
+            .big-date-header .sep {
+                margin: 0 15px;
+                font-size: 4rem;
             }
             
-            /* === ԶՈՒՅԳԻ ԱՆՎԱՆՆԵՐ === */
+            /* === ԱՆՎԱՆՆԵՐ === */
             .name-script {
-                font-size: 5.8rem;
+                font-size: 8rem !important;
             }
             .name-script.groom {
-                margin-left: 2%;
+                margin-left: 0%;
+                align-self: center;
             }
             .name-script.bride {
-                margin-right: 2%;
-                margin-top: -8px;
+                margin-right: 0%;
+                margin-top: -5px;
+                align-self: center;
             }
             .and-text {
-                font-size: 1.1rem;
-                letter-spacing: 0.3em;
+                font-size: 1.8rem !important;
+                letter-spacing: 0.5em;
+                margin: 8px 0;
             }
             
             /* === ԼՈՒՍԱՆԿԱՐ === */
             .couple-photo {
-                height: 400px;
-                margin-bottom: 40px;
+                height: 500px !important;
+                margin-bottom: 30px;
+                border-radius: 16px;
             }
             
             /* === ԾՐԱՐ === */
             #envelope {
-                width: 300px;
-                height: 195px;
-                top: -100px;
+                width: 340px !important;
+                height: 220px !important;
+                top: -120px;
             }
             .flap {
-                border-left: 150px solid transparent;
-                border-right: 150px solid transparent;
-                border-bottom: 88px solid transparent;
-                border-top: 105px solid #7D7D7D;
+                border-left: 170px solid transparent !important;
+                border-right: 170px solid transparent !important;
+                border-bottom: 100px solid transparent !important;
+                border-top: 120px solid #7D7D7D !important;
             }
             .pocket {
-                border-left: 150px solid #BEBEBE;
-                border-right: 150px solid #BEBEBE;
-                border-bottom: 97px solid #A9A9A9;
-                border-top: 97px solid transparent;
+                border-left: 170px solid #BEBEBE !important;
+                border-right: 170px solid #BEBEBE !important;
+                border-bottom: 110px solid #A9A9A9 !important;
+                border-top: 110px solid transparent !important;
             }
             .seal {
-                width: 65px;
-                height: 65px;
-                top: 82px;
+                width: 75px !important;
+                height: 75px !important;
+                top: 92px !important;
             }
             .letter .closing-text {
-                font-size: 22px;
-                gap: 10px;
+                font-size: 28px !important;
+                gap: 12px;
             }
             .heart-outline {
-                width: 28px;
-                height: 28px;
+                width: 34px !important;
+                height: 34px !important;
+            }
+            .envelope-wrapper {
+                height: 420px;
             }
             
             /* === MUSIC TOGGLE === */
             .music-toggle {
-                width: 70px;
-                height: 54px;
-                margin: -18px auto 14px;
+                width: 80px !important;
+                height: 60px !important;
+                margin: -20px auto 18px;
             }
             .music-toggle .float-note {
-                font-size: 16px;
+                font-size: 20px !important;
             }
             
-            /* === ՍԻՐՏԻ ՆԿԱՐ === */
+            /* === ՍԻՐՏ === */
             .image img {
                 width: 100%;
-                max-height: 280px;
+                max-height: 350px;
                 object-fit: contain;
             }
             
-            /* === ՃԱՆԱՊԱՐՀ / LOCATION === */
+            /* === ՃԱՆԱՊԱՐՀ === */
             .location-wrapper {
-                height: 750px;
-                margin-top: -40px;
+                height: 850px !important;
+                margin-top: -30px;
             }
             .path-svg {
-                height: 750px;
-            }
-            #travelPath {
-                d: path("M 200 10 C 320 10, 320 140, 200 150 C 80 160, 80 290, 200 300 C 320 310, 320 440, 200 450 C 80 460, 80 590, 200 630 C 200 630, 200 660, 200 660");
+                height: 850px !important;
             }
             .location-traveler {
-                width: 48px;
-                height: 48px;
+                width: 55px !important;
+                height: 55px !important;
             }
             .location-traveler svg {
-                width: 48px;
-                height: 48px;
-            }
-            .location-traveler.animate-path {
-                offset-path: path("M 200 10 C 320 10, 320 140, 200 150 C 80 160, 80 290, 200 300 C 320 310, 320 440, 200 450 C 80 460, 80 590, 200 630 C 200 630, 200 660, 200 660");
-                offset-distance: 0%;
-                offset-rotate: 0deg;
-                animation: travelPath 14s ease-in-out forwards;
-            }
-            @keyframes travelPath {
-                0%   { offset-distance: 0%; }
-                7%   { offset-distance: 0%; }
-                30%  { offset-distance: 30%; }
-                38%  { offset-distance: 30%; }
-                55%  { offset-distance: 60%; }
-                63%  { offset-distance: 60%; }
-                80%  { offset-distance: 100%; }
-                100% { offset-distance: 100%; }
+                width: 55px !important;
+                height: 55px !important;
             }
             
             /* === ԺԱՄԱՆԱԿԱՑՈՒՅՑ === */
             .schedule-item {
-                max-width: 200px;
+                max-width: 240px !important;
             }
             .s-time {
-                font-size: 48px;
+                font-size: 56px !important;
             }
             .s-title {
-                font-size: 24px;
+                font-size: 28px !important;
+                margin-top: 8px;
             }
             .s-desc {
-                font-size: 15px;
+                font-size: 18px !important;
                 white-space: normal;
-                line-height: 1.3;
+                line-height: 1.4;
+                margin: 4px 0 12px;
             }
             .btn-nav {
-                font-size: 13px;
-                padding: 7px 20px;
+                font-size: 15px !important;
+                padding: 8px 24px !important;
+                border-radius: 25px;
             }
-            #stop1 { top: -12px !important; right: calc(50% + 22px) !important; }
-            #stop2 { top: 180px !important; left: calc(50% + 22px) !important; }
-            #stop3 { top: 330px !important; right: calc(50% + 22px) !important; }
-            #stop4 { top: 500px !important; right: calc(6% + 6px) !important; }
+            #stop1 { top: -15px !important; right: calc(50% + 30px) !important; }
+            #stop2 { top: 200px !important; left: calc(50% + 30px) !important; }
+            #stop3 { top: 370px !important; right: calc(50% + 30px) !important; }
+            #stop4 { top: 550px !important; right: calc(5% + 10px) !important; }
             
             .stop-dot {
-                width: 16px;
-                height: 16px;
+                width: 20px !important;
+                height: 20px !important;
             }
-            #dot1 { top: 10px !important; }
-            #dot2 { top: 195px !important; }
-            #dot3 { top: 410px !important; }
-            #dot4 { top: 570px !important; }
+            #dot1 { top: 12px !important; }
+            #dot2 { top: 220px !important; }
+            #dot3 { top: 460px !important; }
+            #dot4 { top: 620px !important; }
             
             /* === ԵՐԿՐՈՐԴ ԼՈՒՍԱՆԿԱՐ === */
             .ketagic-bg {
-                margin-top: 30px;
-                border-radius: 16px;
+                margin-top: 40px;
+                border-radius: 20px;
             }
             .ketagic-bg img {
-                border-radius: 16px;
+                border-radius: 20px;
             }
             
-            /* === ՕՐՎԱՑՈՒՅՑ / CALENDAR === */
+            /* === ՕՐՎԱՑՈՒՅՑ === */
             .calendar-container {
-                margin-top: 60px;
-                padding-top: 20px;
+                margin-top: 70px;
+                padding-top: 25px;
             }
             .big-date {
-                font-size: 80px;
+                font-size: 100px !important;
             }
             .month-text {
-                font-size: 40px;
-                margin-top: -8px;
-                margin-bottom: 32px;
+                font-size: 48px !important;
+                margin-top: -10px;
+                margin-bottom: 40px;
             }
             table {
-                font-size: 22px;
-                border-spacing: 10px 12px;
+                font-size: 26px !important;
+                border-spacing: 12px 14px;
             }
             th {
-                font-size: 14px;
-                padding: 6px 0 12px;
+                font-size: 16px !important;
+                padding: 8px 0 14px;
             }
             td {
-                width: 48px;
-                height: 48px;
+                width: 55px !important;
+                height: 55px !important;
             }
             .heart {
-                width: 48px;
-                height: 48px;
+                width: 55px !important;
+                height: 55px !important;
                 top: 72%;
                 left: 12%;
             }
             .heart span {
-                font-size: 20px;
+                font-size: 24px !important;
             }
             
             /* === RSVP === */
             #rsvpForm {
-                margin: 50px auto;
+                margin: 60px auto;
                 max-width: 100%;
-                padding: 0 12px;
-            }
-            .name-fields {
-                gap: 18px;
                 padding: 0 10px;
             }
+            .name-fields {
+                gap: 22px;
+                padding: 0 5px;
+            }
             .name-input {
-                font-size: 20px;
-                padding: 16px 20px;
-                border-radius: 30px;
+                font-size: 24px !important;
+                padding: 18px 24px !important;
+                border-radius: 35px;
             }
             .rsvp-select {
-                font-size: 20px;
-                padding: 16px 20px;
+                font-size: 24px !important;
+                padding: 18px 24px !important;
             }
             .dual-button-wrapper {
-                gap: 12px;
-                margin-top: 20px;
+                gap: 15px;
+                margin-top: 25px;
+                flex-direction: row;
             }
             .dual-button-wrapper .btn-rsvp {
-                font-size: 17px;
-                padding: 16px 6px;
-                border-radius: 30px;
+                font-size: 20px !important;
+                padding: 18px 8px !important;
+                border-radius: 35px;
             }
             
             /* === ՀԱՂՈՐԴԱԳՐՈՒԹՅՈՒՆ === */
             .confirmation-message {
                 max-width: 95%;
-                font-size: 20px;
-                padding: 28px 24px;
-                top: 135px;
-                border-radius: 24px;
+                font-size: 24px;
+                padding: 32px 28px;
+                top: 120px;
+                border-radius: 28px;
             }
             .message-title {
-                font-size: 28px;
+                font-size: 32px;
             }
             .message-text {
-                font-size: 20px;
+                font-size: 24px;
             }
         }
 
-        @media (max-width: 360px) {
-            .dual-button-wrapper .btn-rsvp {
-                font-size: 14px;
-                padding: 14px 4px;
-            }
+        /* ═══ ՇԱՏ ՓՈՔՐ ԷԿՐԱՆՆԵՐ ═══ */
+        @media (max-width: 380px) {
             .big-date-header {
-                font-size: 3.2rem;
+                font-size: 4rem !important;
             }
             .name-script {
-                font-size: 5rem;
+                font-size: 6.5rem !important;
             }
             .couple-photo {
-                height: 340px;
+                height: 400px !important;
+            }
+            #envelope {
+                width: 280px !important;
+                height: 190px !important;
+            }
+            .flap {
+                border-left: 140px solid transparent !important;
+                border-right: 140px solid transparent !important;
+                border-top: 100px solid #7D7D7D !important;
+            }
+            .pocket {
+                border-left: 140px solid #BEBEBE !important;
+                border-right: 140px solid #BEBEBE !important;
             }
             .s-time {
-                font-size: 40px;
+                font-size: 44px !important;
             }
             .s-title {
-                font-size: 20px;
+                font-size: 22px !important;
+            }
+            .s-desc {
+                font-size: 15px !important;
             }
             table {
-                font-size: 18px;
-                border-spacing: 6px 8px;
+                font-size: 20px !important;
+                border-spacing: 8px 10px;
             }
             td {
-                width: 38px;
-                height: 38px;
+                width: 42px !important;
+                height: 42px !important;
             }
             .heart {
-                width: 38px;
-                height: 38px;
+                width: 42px !important;
+                height: 42px !important;
             }
             .heart span {
-                font-size: 16px;
+                font-size: 18px !important;
+            }
+            .name-input {
+                font-size: 20px !important;
+                padding: 14px 18px !important;
+            }
+            .dual-button-wrapper .btn-rsvp {
+                font-size: 16px !important;
+                padding: 14px 4px !important;
             }
         }
     </style>
@@ -1043,7 +1062,7 @@
             </div>
         </div>
         <div class="content" id="content">
-            <!-- ═══ Music toggle: animated notes, colored to match the site palette ═══ -->
+            <!-- ═══ Music toggle ═══ -->
             <div id="music-btn" class="music-toggle">
                 <span class="float-note n1">&#9834;</span>
                 <span class="float-note n2">&#9835;</span>
@@ -1225,14 +1244,12 @@
                     musicBtn.classList.add('playing');
                     music.play().catch(function (err) {
                         console.warn('Autoplay blocked:', err);
-                        // Եթե autoplay-ն արգելափակված է, օգտատերը կարող է միացնել կոճակով
                     });
                 }
             }
 
             function openEnvelope() {
                 if (envelope.classList.contains('close')) {
-                    // ═══ ԵՐԱԺՇՏՈՒԹՅՈՒՆԸ ՄԻԱՑՆԵԼ ԱՆՄԻՋԱՊԵՍ ═══
                     startMusic();
 
                     envelope.classList.remove('close');
@@ -1248,17 +1265,14 @@
                 }
             }
 
-            // Կնիքին սեղմելը բացում է ծրարը և միացնում երաժշտությունը
             if (seal) {
                 seal.addEventListener('click', function (e) {
                     e.stopPropagation();
                     openEnvelope();
                 });
             }
-            // Ամբողջ ծրարին սեղմելը
             envelope.addEventListener('click', openEnvelope);
 
-            // Music button — play / pause toggle (animated notes)
             if (musicBtn) {
                 musicBtn.addEventListener('click', function () {
                     if (isPlaying) {
@@ -1338,7 +1352,6 @@
                     ? 'Մենք ստացել ենք Ձեր պատասխանը և ուրախ ենք կիսել օրը Ձեզ հետ' 
                     : 'Շնորհակալ ենք պատասխանի համար';
 
-                // Ուղարկել տվյալները
                 const params = new URLSearchParams();
                 params.append('full_name', `${first} ${last}`);
                 params.append('firstName', first);
