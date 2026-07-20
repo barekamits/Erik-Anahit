@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Wedding Invitation</title>
     <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding: 40px 20px 20px;
+            padding: 20px 10px 10px;
         }
         html, body {
             overflow-x: hidden;
@@ -50,21 +50,21 @@
             width: 100%;
             max-width: 400px;
             text-align: center;
-            padding: 40px 30px;
+            padding: 20px 12px;
             position: relative;
         }
         
         .big-date-header {
             font-family: 'Playfair Display', serif;
-            font-size: 3.2rem;
+            font-size: 2.6rem;
             font-weight: 400;
             color: #2c2c2c;
-            letter-spacing: 0.06em;
-            margin-bottom: 35px;
+            letter-spacing: 0.04em;
+            margin-bottom: 20px;
             line-height: 1;
         }
         .big-date-header .sep {
-            margin: 0 10px;
+            margin: 0 6px;
             font-weight: 300;
             color: #8a8a8a;
         }
@@ -72,27 +72,27 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 30px;
+            margin-bottom: 16px;
         }
         .name-script {
             font-family: 'Alex Brush', cursive;
-            font-size: 4.5rem;
+            font-size: 3.2rem;
             color: #2c2c2c;
             line-height: 1;
         }
         .name-script.groom {
             align-self: flex-start;
-            margin-left: 5%;
+            margin-left: 2%;
         }
         .name-script.bride {
             align-self: flex-end;
-            margin-right: 5%;
-            margin-top: -10px;
+            margin-right: 2%;
+            margin-top: -6px;
         }
         .and-text {
             font-family: 'Playfair Display', serif;
-            font-size: 0.75rem;
-            letter-spacing: 0.25em;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
             text-transform: uppercase;
             color: #6a6a6a;
             align-self: center;
@@ -101,10 +101,10 @@
         
         .couple-photo {
             width: 100%;
-            height: 420px;
+            height: 280px;
             background: linear-gradient(135deg, #f0f0f0, #d0d0d0);
             border-radius: 8px;
-            margin-bottom: 50px;
+            margin-bottom: 24px;
             overflow: hidden;
             position: relative;
         }
@@ -117,7 +117,7 @@
             align-items: center;
             justify-content: center;
             color: #666;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
         .photo-placeholder img {
             width: 100%;
@@ -130,15 +130,15 @@
         /* ═══ ENVELOPE ═══ */
         #envelope {
             position: relative;
-            width: 280px;
-            height: 180px;
-            border-bottom-left-radius: 6px;
-            border-bottom-right-radius: 6px;
+            width: 220px;
+            height: 140px;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
             margin-left: auto;
             margin-right: auto;
-            top: -100px;
+            top: -60px;
             background-color: #BEBEBE;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
             cursor: pointer;
         }
         .front {
@@ -148,28 +148,28 @@
             z-index: 3;
         }
         .flap {
-            border-left: 140px solid transparent;
-            border-right: 140px solid transparent;
-            border-bottom: 82px solid transparent;
-            border-top: 98px solid #7D7D7D;
+            border-left: 110px solid transparent;
+            border-right: 110px solid transparent;
+            border-bottom: 62px solid transparent;
+            border-top: 78px solid #7D7D7D;
             transform-origin: top;
         }
         .pocket {
-            border-left: 140px solid #BEBEBE;
-            border-right: 140px solid #BEBEBE;
-            border-bottom: 90px solid #A9A9A9;
-            border-top: 90px solid transparent;
-            border-bottom-left-radius: 6px;
-            border-bottom-right-radius: 6px;
+            border-left: 110px solid #BEBEBE;
+            border-right: 110px solid #BEBEBE;
+            border-bottom: 70px solid #A9A9A9;
+            border-top: 70px solid transparent;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
         }
 
         /* ═══ ENVELOPE SEAL ═══ */
         .seal {
             position: absolute;
-            width: 58px;
-            height: 58px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
-            top: 76px;
+            top: 60px;
             left: 50%;
             transform: translate(-50%, -50%);
             display: flex;
@@ -186,7 +186,7 @@
             object-fit: cover;
         }
         .seal:hover {
-            transform: translate(-50%, -50%) scale(1.06);
+            transform: translate(-50%, -50%) scale(1.04);
         }
         .open .seal,
         .disappear .seal {
@@ -200,8 +200,8 @@
             width: 90%;
             height: 90%;
             margin: 5% auto;
-            border-radius: 6px;
-            box-shadow: 0 2px 26px rgba(0,0,0,0.12);
+            border-radius: 4px;
+            box-shadow: 0 2px 18px rgba(0,0,0,0.10);
         }
         .letter:after {
             content: '';
@@ -219,16 +219,16 @@
             transform: translate(-50%, -50%);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             font-family: 'Vrdznagir', serif;
-            font-size: 20px;
+            font-size: 14px;
             font-style: italic;
             color: #222;
             white-space: nowrap;
         }
         .heart-outline {
-            width: 24px;
-            height: 24px;
+            width: 18px;
+            height: 18px;
             transform: rotate(10deg);
         }
         .open .flap {
@@ -250,7 +250,7 @@
         }
         
         .open .letter {
-            transform: translatey(-60px);
+            transform: translatey(-50px);
             transition: transform 0.4s 0.6s ease, z-index 0.6s;
             z-index: 2;
         }
@@ -259,11 +259,11 @@
             to { opacity: 0; transform: scale(0.9); }
         }
         .disappear {
-            animation: fadeOut 1s ease forwards;
+            animation: fadeOut 0.8s ease forwards;
         }
         
         .envelope-wrapper {
-            height: 380px;
+            height: 260px;
         }
         /* ═══ MAIN CONTENT ═══ */
         .content {
@@ -278,55 +278,56 @@
         /* ═══ MUSIC TOGGLE ═══ */
         .music-toggle {
             position: relative;
-            width: 60px;
-            height: 46px;
-            margin: -18px auto 10px;
+            width: 44px;
+            height: 34px;
+            margin: -12px auto 6px;
             cursor: pointer;
         }
         .music-toggle .float-note {
             position: absolute;
             top: 50%;
             left: 50%;
-            font-size: 13px;
+            font-size: 11px;
             color: #5c4a3a;
             opacity: 0;
             pointer-events: none;
-            text-shadow: 0 1px 2px rgba(92, 74, 58, 0.25);
+            text-shadow: 0 1px 2px rgba(92, 74, 58, 0.2);
         }
-        .music-toggle.playing .float-note.n1 { animation: floatNote1 2.6s ease-in-out infinite; }
-        .music-toggle.playing .float-note.n2 { animation: floatNote2 2.9s ease-in-out 0.9s infinite; }
-        .music-toggle.playing .float-note.n3 { animation: floatNote3 2.4s ease-in-out 1.7s infinite; }
+        .music-toggle.playing .float-note.n1 { animation: floatNote1 2.4s ease-in-out infinite; }
+        .music-toggle.playing .float-note.n2 { animation: floatNote2 2.7s ease-in-out 0.8s infinite; }
+        .music-toggle.playing .float-note.n3 { animation: floatNote3 2.2s ease-in-out 1.5s infinite; }
         @keyframes floatNote1 {
-            0%   { opacity: 0; transform: translate(-10px, 0px) rotate(-8deg) scale(0.7); }
+            0%   { opacity: 0; transform: translate(-8px, 0px) rotate(-8deg) scale(0.7); }
             18%  { opacity: 1; }
             75%  { opacity: 0.65; }
-            100% { opacity: 0; transform: translate(-30px, -58px) rotate(-22deg) scale(1.05); }
+            100% { opacity: 0; transform: translate(-26px, -48px) rotate(-22deg) scale(1.0); }
         }
         @keyframes floatNote2 {
             0%   { opacity: 0; transform: translate(0px, 2px) rotate(0deg) scale(0.7); }
             18%  { opacity: 1; }
             75%  { opacity: 0.65; }
-            100% { opacity: 0; transform: translate(2px, -60px) rotate(6deg) scale(1.05); }
+            100% { opacity: 0; transform: translate(2px, -50px) rotate(6deg) scale(1.0); }
         }
         @keyframes floatNote3 {
-            0%   { opacity: 0; transform: translate(8px, 0px) rotate(6deg) scale(0.7); }
+            0%   { opacity: 0; transform: translate(6px, 0px) rotate(6deg) scale(0.7); }
             18%  { opacity: 1; }
             75%  { opacity: 0.65; }
-            100% { opacity: 0; transform: translate(28px, -58px) rotate(18deg) scale(1.05); }
+            100% { opacity: 0; transform: translate(22px, -48px) rotate(18deg) scale(1.0); }
         }
 
         .image img {
-            width: 300px;
-            height: 200px;
+            width: 100%;
+            max-width: 240px;
+            height: auto;
             cursor: pointer;
-            margin-top: -10px;
+            margin-top: 4px;
         }
         /* ═══ LOCATION PATH ═══ */
         .location-wrapper {
             position: relative;
             width: 100%;
-            height: 620px;
-            margin-top: -60px;
+            height: 480px;
+            margin-top: -30px;
             overflow: visible;
         }
         .path-svg {
@@ -334,36 +335,36 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 620px;
+            height: 480px;
             overflow: visible;
         }
         .dotted-path {
             fill: none;
             stroke: #5c4a3a;
-            stroke-width: 3;
-            stroke-dasharray: 1, 14;
+            stroke-width: 2.5;
+            stroke-dasharray: 1, 12;
             stroke-linecap: round;
-            opacity: 0.75;
+            opacity: 0.7;
         }
         .location-traveler {
             position: absolute;
-            width: 40px;
-            height: 40px;
+            width: 32px;
+            height: 32px;
             pointer-events: none;
             z-index: 10;
-            filter: drop-shadow(0 3px 8px rgba(92, 74, 58, 0.45));
+            filter: drop-shadow(0 2px 6px rgba(92, 74, 58, 0.4));
             top: 0;
             left: 0;
         }
         .location-traveler svg {
-            width: 40px;
-            height: 40px;
+            width: 32px;
+            height: 32px;
         }
         .location-traveler.animate-path {
-            offset-path: path('M 200 10 C 320 10, 320 140, 200 150 C 80 160, 80 290, 200 300 C 320 310, 320 440, 200 450 C 80 460, 80 590, 200 610');
+            offset-path: path('M 200 8 C 300 8, 300 110, 200 118 C 100 126, 100 230, 200 238 C 300 246, 300 350, 200 358 C 100 366, 100 470, 200 480');
             offset-distance: 0%;
             offset-rotate: 0deg;
-            animation: travelPath 12s ease-in-out forwards;
+            animation: travelPath 11s ease-in-out forwards;
             animation-play-state: paused;
         }
         .location-traveler.animate-path.playing {
@@ -381,10 +382,10 @@
         }
         .schedule-item {
             position: absolute;
-            max-width: 160px;
+            max-width: 120px;
             opacity: 0;
-            transform: translateY(18px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            transform: translateY(12px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
         }
         .schedule-item.visible {
             opacity: 1;
@@ -392,40 +393,41 @@
         }
         .schedule-item.left {
             text-align: right;
-            margin-top: 20px;
+            margin-top: 10px;
         }
         .schedule-item.right {
             text-align: left;
-            margin-top: 1%;
+            margin-top: 0%;
         }
         .s-time {
-            font-size: 42px;
+            font-size: 28px;
             font-family: 'HEGHNAR';
-            color: rgba(44, 44, 44, 0.12);
+            color: rgba(44, 44, 44, 0.10);
             font-weight: bold;
             line-height: 1;
             letter-spacing: 0.02em;
         }
         .s-title {
             font-family: 'Vrdznagir';
-            font-size: 20px;
+            font-size: 16px;
             font-weight: bold;
             color: #2c2c2c;
-            margin-top: 6px;
+            margin-top: 4px;
         }
         .s-desc {
             font-family: 'Vrdznagir', serif;
-            font-size: 12px;
+            font-size: 10px;
             color: #777;
-            margin: 2px 0 10px;
+            margin: 2px 0 8px;
             font-style: italic;
             text-align: center;
-            white-space: nowrap;
+            white-space: normal;
+            line-height: 1.3;
         }
         .stop-dot {
             position: absolute;
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             background: #5c4a3a;
             border-radius: 50%;
             z-index: 5;
@@ -438,77 +440,40 @@
         }
         .btn-nav {
             display: inline-block;
-            padding: 5px 14px;
+            padding: 3px 10px;
             border: 1px solid #b0a090;
             cursor: pointer;
-            font-size: 10px;
+            font-size: 9px;
             font-family: 'Vrdznagir';
             color: #5c4a3a;
             background-color: transparent;
-            border-radius: 20px;
+            border-radius: 16px;
             text-decoration: none;
             transition: all 0.3s;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.04em;
         }
         .btn-nav:hover {
             background: #5c4a3a;
             color: white;
             border-color: #5c4a3a;
         }
-        #stop1 {
-            text-align: center;
-        }
-        #stop1 .s-title {
-            white-space: nowrap;
-        }
-        #stop1 .s-desc {
-            text-align: center;
-            margin-top: 4px;
-        }
-        #stop1 .btn-nav {
-            display: inline-block;
-            margin-top: 8px;
-        }
-        #stop2 {
-            top: 160px !important;
-            left: calc(50% + 5px) !important;
-        }
-        #stop3 {
-            text-align: center;
-        }
-        #stop3 .s-title {
-            white-space: nowrap;
-        }
-        #stop3 .s-desc {
-            text-align: center;
-            margin-top: 4px;
-        }
-        #stop3 .btn-nav {
-            display: inline-block;
-            margin-top: 8px;
-        }
-        #stop4 {
-            left: auto !important;
-            right: calc(8% + 4px) !important;
-            text-align: right;
-        }
-        #stop4 .s-title {
-            white-space: nowrap;
-        }
-        #stop4 .s-desc {
-            text-align: center;
-            margin-top: 4px;
-        }
-        #stop4 .btn-nav {
-            display: inline-block;
-            margin-top: 8px;
-        }
+        #stop1 .s-title { white-space: nowrap; }
+        #stop1 .s-desc { text-align: center; margin-top: 2px; }
+        #stop1 .btn-nav { display: inline-block; margin-top: 4px; }
+        #stop2 { top: 110px !important; left: calc(50% + 8px) !important; }
+        #stop3 .s-title { white-space: nowrap; }
+        #stop3 .s-desc { text-align: center; margin-top: 2px; }
+        #stop3 .btn-nav { display: inline-block; margin-top: 4px; }
+        #stop4 { left: auto !important; right: calc(5% + 4px) !important; text-align: right; }
+        #stop4 .s-title { white-space: nowrap; }
+        #stop4 .s-desc { text-align: center; margin-top: 2px; }
+        #stop4 .btn-nav { display: inline-block; margin-top: 4px; }
         /* ═══ COUPLE 2 PHOTO ═══ */
         .ketagic-bg {
             position: relative;
             width: 100%;
-            margin-top: 20px;
-            border-radius: 12px;
+            margin-top: 10px;
+            border-radius: 8px;
             overflow: hidden;
             z-index: 1;
         }
@@ -516,7 +481,7 @@
             width: 100%;
             height: auto;
             object-fit: contain;
-            border-radius: 12px;
+            border-radius: 8px;
             opacity: 0.85;
         }
 
@@ -526,53 +491,53 @@
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
-            margin-top: 40px;
-            padding-top: 10px;
+            margin-top: 20px;
+            padding-top: 6px;
         }
         .big-date {
-            font-size: 60px;
+            font-size: 44px;
             font-weight: 300;
-            color: rgba(0,0,0,0.1);
+            color: rgba(0,0,0,0.08);
             margin: 0;
             line-height: 1;
         }
         .month-text {
             font-family: 'Vrdznagir';
-            font-size: 32px;
+            font-size: 22px;
             font-style: italic;
             color: #333333;
-            margin-top: -6px;
-            margin-bottom: 28px;
+            margin-top: -4px;
+            margin-bottom: 16px;
         }
         table {
             border-collapse: separate;
-            border-spacing: 6px 8px;
+            border-spacing: 4px 6px;
             margin: 0 auto;
             text-align: center;
-            font-size: 17px;
+            font-size: 14px;
         }
         th {
             font-weight: 500;
-            padding: 4px 0 10px;
+            padding: 2px 0 6px;
             color: #8a8a8a;
-            font-size: 12px;
-            letter-spacing: 0.06em;
+            font-size: 10px;
+            letter-spacing: 0.04em;
             text-transform: uppercase;
         }
         td {
-            width: 38px;
-            height: 38px;
+            width: 30px;
+            height: 30px;
             padding: 0;
             color: #333;
             position: relative;
             vertical-align: middle;
         }
         .heart {
-            width: 38px;
-            height: 38px;
+            width: 30px;
+            height: 30px;
             position: absolute;
-            top: 74%;
-            left: 12%;
+            top: 70%;
+            left: 10%;
             transform: translate(-50%, -50%);
         }
         .heart svg {
@@ -587,33 +552,33 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 15px;
+            font-size: 12px;
             font-weight: 600;
             color: #2c3e50;
         }
         /* ═══ RSVP ═══ */
         #rsvpForm {
-            margin: 40px auto;
+            margin: 28px auto;
             width: 100%;
-            max-width: 320px;
+            max-width: 280px;
         }
 
         .name-fields {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 10px;
             align-items: center;
-            padding: 0 20px;
+            padding: 0 10px;
         }
 
         .name-input {
             width: 100%;
-            padding: 12px 16px;
-            font-size: 16px;
+            padding: 8px 14px;
+            font-size: 14px;
             color: #3B3B28;
             background-color: white;
             border: 1px solid #3B3B28;
-            border-radius: 25px;
+            border-radius: 20px;
             outline: none;
             transition: all 0.3s ease;
         }
@@ -626,10 +591,10 @@
         }
 
         .btn-rsvp {
-            font-size: 18px;
+            font-size: 14px;
             color: white;
-            padding: 12px 45px;
-            border-radius: 40px;
+            padding: 8px 28px;
+            border-radius: 30px;
             border: none;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -643,32 +608,32 @@
 
         .confirmation-message {
             position: fixed;
-            top: 145px;
+            top: 100px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1000;
-            font-size: 18px;
+            font-size: 15px;
             color: #4c4731;
             text-align: center;
             opacity: 0;
             transition: all 0.5s ease;
             background-color: rgba(255, 255, 255, 0.95);
-            padding: 20px 30px;
-            border-radius: 20px;
+            padding: 16px 24px;
+            border-radius: 16px;
             border: 1px solid #4c4731;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-            backdrop-filter: blur(10px);
-            max-width: 350px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            backdrop-filter: blur(8px);
+            max-width: 300px;
             pointer-events: none;
         }
 
         .confirmation-message.show {
             opacity: 1;
-            animation: slideInFromTop 0.6s ease-out;
+            animation: slideInFromTop 0.5s ease-out;
         }
 
         .confirmation-message.hide {
-            animation: slideOutToTop 0.5s ease-in;
+            animation: slideOutToTop 0.4s ease-in;
         }
 
         .error-message {
@@ -678,26 +643,26 @@
         }
 
         @keyframes slideInFromTop {
-            from { opacity: 0; transform: translateX(-50%) translateY(-100px); }
+            from { opacity: 0; transform: translateX(-50%) translateY(-80px); }
             to   { opacity: 1; transform: translateX(-50%) translateY(0); }
         }
 
         @keyframes slideOutToTop {
             from { opacity: 1; transform: translateX(-50%) translateY(0); }
-            to   { opacity: 0; transform: translateX(-50%) translateY(-100px); }
+            to   { opacity: 0; transform: translateX(-50%) translateY(-80px); }
         }
 
         .message-title {
             font-family: 'Vrdznagir', sans-serif;
-            font-size: 22px;
-            margin-bottom: 8px;
+            font-size: 18px;
+            margin-bottom: 4px;
             color: #4c4731;
         }
 
         .message-text {
             font-family: 'Vrdznagir', sans-serif;
-            font-size: 16px;
-            line-height: 1.4;
+            font-size: 14px;
+            line-height: 1.3;
         }
 
         .rsvp-select {
@@ -710,17 +675,17 @@
         .dual-button-wrapper {
             display: flex;
             justify-content: space-between;
-            gap: 8px;
-            margin-top: 15px;
+            gap: 6px;
+            margin-top: 10px;
             width: 100%;
         }
 
         .dual-button-wrapper .btn-rsvp {
             flex: 1;
-            padding: 12px 2px;
-            font-size: 13px;
+            padding: 8px 2px;
+            font-size: 11px;
             white-space: nowrap;
-            letter-spacing: -0.5px;
+            letter-spacing: -0.3px;
             cursor: pointer;
             text-align: center;
             border: 1px solid #ccc;
@@ -729,302 +694,103 @@
             transition: all 0.3s ease;
         }
 
-        /* ═══ ՄՈԲԱՅԼ ԷԿՐԱՆՆԵՐ - ԱՎԵԼԻ ՄԵԾ ═══ */
+        /* ═══ MOBILE SMALL ═══ */
         @media (max-width: 480px) {
-            /* === ՀԻՄՆԱԿԱՆ === */
-            .invitation-card {
-                padding: 15px 10px;
-                max-width: 100%;
-            }
-            
-            /* === ՎԵՐՆԱԳԻՐ === */
-            .big-date-header {
-                font-size: 5rem !important;
-                margin-bottom: 30px;
-                letter-spacing: 0.1em;
-            }
-            .big-date-header .sep {
-                margin: 0 15px;
-                font-size: 4rem;
-            }
-            
-            /* === ԱՆՎԱՆՆԵՐ === */
-            .name-script {
-                font-size: 8rem !important;
-            }
-            .name-script.groom {
-                margin-left: 0%;
-                align-self: center;
-            }
-            .name-script.bride {
-                margin-right: 0%;
-                margin-top: -5px;
-                align-self: center;
-            }
-            .and-text {
-                font-size: 1.8rem !important;
-                letter-spacing: 0.5em;
-                margin: 8px 0;
-            }
-            
-            /* === ԼՈՒՍԱՆԿԱՐ === */
-            .couple-photo {
-                height: 500px !important;
-                margin-bottom: 30px;
-                border-radius: 16px;
-            }
-            
-            /* === ԾՐԱՐ === */
-            #envelope {
-                width: 340px !important;
-                height: 220px !important;
-                top: -120px;
-            }
-            .flap {
-                border-left: 170px solid transparent !important;
-                border-right: 170px solid transparent !important;
-                border-bottom: 100px solid transparent !important;
-                border-top: 120px solid #7D7D7D !important;
-            }
-            .pocket {
-                border-left: 170px solid #BEBEBE !important;
-                border-right: 170px solid #BEBEBE !important;
-                border-bottom: 110px solid #A9A9A9 !important;
-                border-top: 110px solid transparent !important;
-            }
-            .seal {
-                width: 75px !important;
-                height: 75px !important;
-                top: 92px !important;
-            }
-            .letter .closing-text {
-                font-size: 28px !important;
-                gap: 12px;
-            }
-            .heart-outline {
-                width: 34px !important;
-                height: 34px !important;
-            }
-            .envelope-wrapper {
-                height: 420px;
-            }
-            
-            /* === MUSIC TOGGLE === */
-            .music-toggle {
-                width: 80px !important;
-                height: 60px !important;
-                margin: -20px auto 18px;
-            }
-            .music-toggle .float-note {
-                font-size: 20px !important;
-            }
-            
-            /* === ՍԻՐՏ === */
-            .image img {
-                width: 100%;
-                max-height: 350px;
-                object-fit: contain;
-            }
-            
-            /* === ՃԱՆԱՊԱՐՀ === */
-            .location-wrapper {
-                height: 850px !important;
-                margin-top: -30px;
-            }
-            .path-svg {
-                height: 850px !important;
-            }
-            .location-traveler {
-                width: 55px !important;
-                height: 55px !important;
-            }
-            .location-traveler svg {
-                width: 55px !important;
-                height: 55px !important;
-            }
-            
-            /* === ԺԱՄԱՆԱԿԱՑՈՒՅՑ === */
-            .schedule-item {
-                max-width: 240px !important;
-            }
-            .s-time {
-                font-size: 56px !important;
-            }
-            .s-title {
-                font-size: 28px !important;
-                margin-top: 8px;
-            }
-            .s-desc {
-                font-size: 18px !important;
-                white-space: normal;
-                line-height: 1.4;
-                margin: 4px 0 12px;
-            }
-            .btn-nav {
-                font-size: 15px !important;
-                padding: 8px 24px !important;
-                border-radius: 25px;
-            }
-            #stop1 { top: -15px !important; right: calc(50% + 30px) !important; }
-            #stop2 { top: 200px !important; left: calc(50% + 30px) !important; }
-            #stop3 { top: 370px !important; right: calc(50% + 30px) !important; }
-            #stop4 { top: 550px !important; right: calc(5% + 10px) !important; }
-            
-            .stop-dot {
-                width: 20px !important;
-                height: 20px !important;
-            }
-            #dot1 { top: 12px !important; }
-            #dot2 { top: 220px !important; }
-            #dot3 { top: 460px !important; }
-            #dot4 { top: 620px !important; }
-            
-            /* === ԵՐԿՐՈՐԴ ԼՈՒՍԱՆԿԱՐ === */
-            .ketagic-bg {
-                margin-top: 40px;
-                border-radius: 20px;
-            }
-            .ketagic-bg img {
-                border-radius: 20px;
-            }
-            
-            /* === ՕՐՎԱՑՈՒՅՑ === */
-            .calendar-container {
-                margin-top: 70px;
-                padding-top: 25px;
-            }
-            .big-date {
-                font-size: 100px !important;
-            }
-            .month-text {
-                font-size: 48px !important;
-                margin-top: -10px;
-                margin-bottom: 40px;
-            }
-            table {
-                font-size: 26px !important;
-                border-spacing: 12px 14px;
-            }
-            th {
-                font-size: 16px !important;
-                padding: 8px 0 14px;
-            }
-            td {
-                width: 55px !important;
-                height: 55px !important;
-            }
-            .heart {
-                width: 55px !important;
-                height: 55px !important;
-                top: 72%;
-                left: 12%;
-            }
-            .heart span {
-                font-size: 24px !important;
-            }
-            
-            /* === RSVP === */
-            #rsvpForm {
-                margin: 60px auto;
-                max-width: 100%;
-                padding: 0 10px;
-            }
-            .name-fields {
-                gap: 22px;
-                padding: 0 5px;
-            }
-            .name-input {
-                font-size: 24px !important;
-                padding: 18px 24px !important;
-                border-radius: 35px;
-            }
-            .rsvp-select {
-                font-size: 24px !important;
-                padding: 18px 24px !important;
-            }
-            .dual-button-wrapper {
-                gap: 15px;
-                margin-top: 25px;
-                flex-direction: row;
-            }
-            .dual-button-wrapper .btn-rsvp {
-                font-size: 20px !important;
-                padding: 18px 8px !important;
-                border-radius: 35px;
-            }
-            
-            /* === ՀԱՂՈՐԴԱԳՐՈՒԹՅՈՒՆ === */
-            .confirmation-message {
-                max-width: 95%;
-                font-size: 24px;
-                padding: 32px 28px;
-                top: 120px;
-                border-radius: 28px;
-            }
-            .message-title {
-                font-size: 32px;
-            }
-            .message-text {
-                font-size: 24px;
-            }
+            .invitation-card { padding: 12px 6px; max-width: 100%; }
+            .big-date-header { font-size: 2.2rem; margin-bottom: 14px; }
+            .big-date-header .sep { margin: 0 4px; font-size: 2rem; }
+            .name-script { font-size: 2.8rem; }
+            .name-script.groom { margin-left: 0%; align-self: center; }
+            .name-script.bride { margin-right: 0%; margin-top: -4px; align-self: center; }
+            .and-text { font-size: 0.65rem; letter-spacing: 0.3em; margin: 4px 0; }
+            .couple-photo { height: 200px; margin-bottom: 14px; border-radius: 6px; }
+            #envelope { width: 180px; height: 115px; top: -48px; }
+            .flap { border-left: 90px solid transparent; border-right: 90px solid transparent; border-bottom: 50px solid transparent; border-top: 64px solid #7D7D7D; }
+            .pocket { border-left: 90px solid #BEBEBE; border-right: 90px solid #BEBEBE; border-bottom: 58px solid #A9A9A9; border-top: 58px solid transparent; }
+            .seal { width: 36px; height: 36px; top: 48px; }
+            .closing-text { font-size: 11px; gap: 4px; }
+            .heart-outline { width: 14px; height: 14px; }
+            .envelope-wrapper { height: 200px; }
+            .music-toggle { width: 36px; height: 28px; margin: -8px auto 4px; }
+            .music-toggle .float-note { font-size: 9px; }
+            .image img { max-width: 180px; }
+            .location-wrapper { height: 380px; margin-top: -20px; }
+            .path-svg { height: 380px; }
+            .location-traveler { width: 26px; height: 26px; }
+            .location-traveler svg { width: 26px; height: 26px; }
+            .schedule-item { max-width: 100px; }
+            .s-time { font-size: 22px; }
+            .s-title { font-size: 13px; margin-top: 2px; }
+            .s-desc { font-size: 9px; margin: 1px 0 4px; }
+            .btn-nav { font-size: 8px; padding: 2px 8px; border-radius: 12px; }
+            #stop1 { top: -6px !important; right: calc(50% + 16px) !important; }
+            #stop2 { top: 90px !important; left: calc(50% + 16px) !important; }
+            #stop3 { top: 190px !important; right: calc(50% + 16px) !important; }
+            #stop4 { top: 290px !important; right: calc(2% + 4px) !important; }
+            .stop-dot { width: 8px; height: 8px; }
+            #dot1 { top: 8px !important; }
+            #dot2 { top: 110px !important; }
+            #dot3 { top: 230px !important; }
+            #dot4 { top: 350px !important; }
+            .ketagic-bg { margin-top: 8px; border-radius: 6px; }
+            .ketagic-bg img { border-radius: 6px; }
+            .calendar-container { margin-top: 16px; padding-top: 4px; }
+            .big-date { font-size: 36px; }
+            .month-text { font-size: 18px; margin-top: -2px; margin-bottom: 12px; }
+            table { font-size: 12px; border-spacing: 3px 4px; }
+            th { font-size: 8px; padding: 2px 0 4px; }
+            td { width: 24px; height: 24px; }
+            .heart { width: 24px; height: 24px; top: 68%; left: 8%; }
+            .heart span { font-size: 10px; }
+            #rsvpForm { margin: 20px auto; max-width: 100%; padding: 0 6px; }
+            .name-fields { gap: 8px; padding: 0 4px; }
+            .name-input { font-size: 13px; padding: 6px 12px; border-radius: 16px; }
+            .rsvp-select { font-size: 13px; padding: 6px 12px; }
+            .dual-button-wrapper { gap: 6px; margin-top: 8px; flex-direction: row; }
+            .dual-button-wrapper .btn-rsvp { font-size: 10px; padding: 6px 2px; border-radius: 20px; }
+            .confirmation-message { max-width: 90%; font-size: 14px; padding: 14px 18px; top: 80px; border-radius: 16px; }
+            .message-title { font-size: 16px; }
+            .message-text { font-size: 13px; }
         }
 
-        /* ═══ ՇԱՏ ՓՈՔՐ ԷԿՐԱՆՆԵՐ ═══ */
         @media (max-width: 380px) {
-            .big-date-header {
-                font-size: 4rem !important;
-            }
-            .name-script {
-                font-size: 6.5rem !important;
-            }
-            .couple-photo {
-                height: 400px !important;
-            }
-            #envelope {
-                width: 280px !important;
-                height: 190px !important;
-            }
-            .flap {
-                border-left: 140px solid transparent !important;
-                border-right: 140px solid transparent !important;
-                border-top: 100px solid #7D7D7D !important;
-            }
-            .pocket {
-                border-left: 140px solid #BEBEBE !important;
-                border-right: 140px solid #BEBEBE !important;
-            }
-            .s-time {
-                font-size: 44px !important;
-            }
-            .s-title {
-                font-size: 22px !important;
-            }
-            .s-desc {
-                font-size: 15px !important;
-            }
-            table {
-                font-size: 20px !important;
-                border-spacing: 8px 10px;
-            }
-            td {
-                width: 42px !important;
-                height: 42px !important;
-            }
-            .heart {
-                width: 42px !important;
-                height: 42px !important;
-            }
-            .heart span {
-                font-size: 18px !important;
-            }
-            .name-input {
-                font-size: 20px !important;
-                padding: 14px 18px !important;
-            }
-            .dual-button-wrapper .btn-rsvp {
-                font-size: 16px !important;
-                padding: 14px 4px !important;
-            }
+            .big-date-header { font-size: 1.8rem; }
+            .name-script { font-size: 2.2rem; }
+            .couple-photo { height: 160px; }
+            #envelope { width: 150px; height: 100px; top: -40px; }
+            .flap { border-left: 75px solid transparent; border-right: 75px solid transparent; border-top: 54px solid #7D7D7D; border-bottom: 42px solid transparent; }
+            .pocket { border-left: 75px solid #BEBEBE; border-right: 75px solid #BEBEBE; border-bottom: 50px solid #A9A9A9; border-top: 50px solid transparent; }
+            .seal { width: 30px; height: 30px; top: 40px; }
+            .closing-text { font-size: 9px; }
+            .heart-outline { width: 12px; height: 12px; }
+            .envelope-wrapper { height: 160px; }
+            .image img { max-width: 150px; }
+            .location-wrapper { height: 320px; }
+            .path-svg { height: 320px; }
+            .s-time { font-size: 18px; }
+            .s-title { font-size: 11px; }
+            .s-desc { font-size: 8px; }
+            .btn-nav { font-size: 7px; padding: 1px 6px; }
+            #stop1 { top: -4px !important; right: calc(50% + 10px) !important; }
+            #stop2 { top: 70px !important; left: calc(50% + 10px) !important; }
+            #stop3 { top: 150px !important; right: calc(50% + 10px) !important; }
+            #stop4 { top: 230px !important; right: calc(1% + 2px) !important; }
+            .stop-dot { width: 6px; height: 6px; }
+            #dot1 { top: 6px !important; }
+            #dot2 { top: 90px !important; }
+            #dot3 { top: 190px !important; }
+            #dot4 { top: 290px !important; }
+            .big-date { font-size: 30px; }
+            .month-text { font-size: 15px; }
+            table { font-size: 10px; border-spacing: 2px 3px; }
+            td { width: 20px; height: 20px; }
+            .heart { width: 20px; height: 20px; top: 66%; left: 6%; }
+            .heart span { font-size: 8px; }
+            .name-input { font-size: 11px; padding: 5px 10px; }
+            .dual-button-wrapper .btn-rsvp { font-size: 9px; padding: 4px 2px; }
+            .confirmation-message { font-size: 12px; padding: 12px 14px; top: 60px; }
+            .message-title { font-size: 14px; }
+            .message-text { font-size: 11px; }
         }
     </style>
 </head>
@@ -1040,7 +806,7 @@
         
         <div class="couple-photo">
             <div class="photo-placeholder">
-                <img src="https://uploads.onecompiler.io/43gpeysj6/1784532945296/z1.jfif">
+                <img src="https://uploads.onecompiler.io/43gpeysj6/1784532945296/z1.jfif" alt="Erik & Anahit">
             </div>
         </div>
         
@@ -1074,21 +840,21 @@
             </div>
             <!-- ═══ ANIMATED LOCATION PATH ═══ -->
             <div class="location-wrapper" id="locationWrapper">
-                <svg class="path-svg" id="pathSvg" viewBox="0 0 400 620" preserveAspectRatio="none">
+                <svg class="path-svg" id="pathSvg" viewBox="0 0 400 480" preserveAspectRatio="none">
                     <path
                        id="travelPath"
                        class="dotted-path"
-                       d="M 200 10
-                          C 320 10, 320 140, 200 150
-                          C 80 160, 80 290, 200 300
-                          C 320 310, 320 440, 200 450
-                          C 80 460, 80 590, 200 630"
+                       d="M 200 8
+                          C 300 8, 300 110, 200 118
+                          C 100 126, 100 230, 200 238
+                          C 300 246, 300 350, 200 358
+                          C 100 366, 100 470, 200 480"
                     />
                 </svg>
-                <div class="stop-dot" id="dot1" style="left:50%; top:10px;"></div>
-                <div class="stop-dot" id="dot2" style="left:30%; top:175px;"></div>
-                <div class="stop-dot" id="dot3" style="left:75%; top:370px;"></div>
-                <div class="stop-dot" id="dot4" style="left:25%; top:530px;"></div>
+                <div class="stop-dot" id="dot1" style="left:50%; top:8px;"></div>
+                <div class="stop-dot" id="dot2" style="left:30%; top:138px;"></div>
+                <div class="stop-dot" id="dot3" style="left:75%; top:280px;"></div>
+                <div class="stop-dot" id="dot4" style="left:25%; top:420px;"></div>
                 <div class="location-traveler animate-path" id="locationIcon">
                     <svg viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 1C7.029 1 3 5.029 3 10c0 7 9 19 9 19s9-12 9-19c0-4.971-4.029-9-9-9z"
@@ -1096,18 +862,18 @@
                         <circle cx="12" cy="10" r="4" fill="#e8e0d6"/>
                     </svg>
                 </div>
-                <div class="schedule-item left" id="stop1" style="top: -10px; right: calc(50% + 18px);">
+                <div class="schedule-item left" id="stop1" style="top: -6px; right: calc(50% + 16px);">
                     <div class="s-time">10:00</div>
                     <div class="s-title">Փեսայի Տուն</div>
                 </div>
-                <div class="schedule-item right" id="stop2" style="top: 130px; left: calc(50% + 18px);">
+                <div class="schedule-item right" id="stop2" style="top: 100px; left: calc(50% + 16px);">
                     <div class="s-time">11:00</div>
                     <div class="s-title">Հարսի Տուն</div>
                 </div>
-                <div class="schedule-item left" id="stop3" style="top: 295px; right: calc(50% + 18px);">
+                <div class="schedule-item left" id="stop3" style="top: 220px; right: calc(50% + 16px);">
                     <div class="s-time">15:30</div>
                     <div class="s-title">Պսակադրություն</div>
-                    <div class="s-desc">Աբովյանի Սուրբ Հովհաննես եկեղեցի</div>
+                    <div class="s-desc">Աբովյանի Սուրբ Հովհաննես</div>
                     <a href="https://maps.app.goo.gl/di51KSFwAUeEy49e8"
                        class="btn-nav"
                        target="_blank"
@@ -1115,10 +881,10 @@
                        Ինչպես հասնել
                     </a>
                 </div>
-                <div class="schedule-item right" id="stop4" style="top: 440px; left: calc(50% + 18px);">
+                <div class="schedule-item right" id="stop4" style="top: 340px; left: calc(50% + 16px);">
                     <div class="s-time">17:00</div>
                     <div class="s-title">Տոնական Խնջույք</div>
-                    <div class="s-desc"> Palladium Hall </div>
+                    <div class="s-desc">Palladium Hall</div>
                     <a href="https://maps.app.goo.gl/KAay2M3SKmpipk6w5"
                        class="btn-nav"
                        target="_blank"
@@ -1260,8 +1026,8 @@
                         setTimeout(initScrollAnimations, 300);
                         setTimeout(function () {
                             document.querySelector('.envelope-wrapper').style.display = 'none';
-                        }, 1000);
-                    }, 2500);
+                        }, 900);
+                    }, 2000);
                 }
             }
 
@@ -1296,7 +1062,7 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         icon.classList.add('playing');
-                        const delays = [200, 4000, 7000, 10000];
+                        const delays = [200, 3500, 6000, 8500];
                         const items = ['stop1', 'stop2', 'stop3', 'stop4'];
                         const dots  = ['dot1',  'dot2',  'dot3',  'dot4'];
                         items.forEach((id, i) => {
@@ -1331,11 +1097,10 @@
             setTimeout(() => {
                 el.style.display = 'none';
                 el.classList.remove('show', 'hide');
-            }, 500);
-        }, 5000); // Մի փոքր երկարացրի, որ հասցնեն կարդալ
+            }, 400);
+        }, 4000);
     }
 
-    // Սա այն ֆունկցիան է, որը պետք է կանչել կոճակների onclick-ի ժամանակ
     window.submitToPerson = function (target) {
         const first = (FORM.querySelector('[name="firstName"]').value || '').trim();
         const last  = (FORM.querySelector('[name="lastName"]').value || '').trim();
@@ -1357,7 +1122,7 @@
         params.append('lastName', last);
         params.append('response', resp);
         params.append('guests', guests);
-        params.append('target', target); // Սարգիս կամ Մանե
+        params.append('target', target);
         params.append('timestamp', new Date().toISOString());
 
         fetch(ENDPOINT, {
@@ -1367,9 +1132,7 @@
             body: params.toString()
         }).catch(err => console.error('RSVP error:', err));
 
-        // Պատասխան հաղորդագրությունը ըստ ընտրված մարդու
         const personName = (target === 'groom') ? 'Էրիկ' : 'Անահիտ';
-        
         showMsg(
             OK,
             `<div class="message-text">Շնորհակալ եմ, ես ստացել եմ Ձեր պատասխանը:<br>Սիրով՝ ${personName}</div>`
