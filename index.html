@@ -832,6 +832,102 @@
             font-size: 16px;
             line-height: 1.4;
         }
+
+        /* ═══ MOBILE ENLARGEMENTS ═══ */
+        @media (max-width: 480px) {
+            .invitation-card {
+                padding: 30px 15px;
+            }
+            .big-date-header {
+                font-size: 4rem;
+            }
+            .couple-photo {
+                height: 360px;
+            }
+            .name-script {
+                font-size: 5.5rem;
+            }
+            .and-text {
+                font-size: 1rem;
+            }
+            .image img {
+                width: 100%;
+                height: auto;
+                max-height: 260px;
+                object-fit: contain;
+            }
+            .location-wrapper {
+                height: 700px;
+            }
+            .schedule-item {
+                max-width: 180px;
+            }
+            .s-title {
+                font-size: 22px;
+            }
+            .s-desc {
+                font-size: 14px;
+                white-space: normal;
+            }
+            .s-time {
+                font-size: 48px;
+            }
+            .btn-nav {
+                font-size: 12px;
+                padding: 6px 18px;
+            }
+            .ketagic-bg img {
+                width: 100%;
+                height: auto;
+            }
+            .calendar-container {
+                margin-top: 50px;
+            }
+            .big-date {
+                font-size: 72px;
+            }
+            .month-text {
+                font-size: 38px;
+            }
+            table {
+                font-size: 20px;
+                border-spacing: 8px 10px;
+            }
+            td {
+                width: 44px;
+                height: 44px;
+            }
+            .heart {
+                width: 44px;
+                height: 44px;
+            }
+            .heart span {
+                font-size: 18px;
+            }
+            #rsvpForm {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+            .name-input {
+                font-size: 18px;
+                padding: 14px 18px;
+            }
+            .dual-button-wrapper .btn-rsvp {
+                font-size: 15px;
+                padding: 14px 4px;
+            }
+            .confirmation-message {
+                max-width: 90%;
+                font-size: 20px;
+                padding: 24px 20px;
+            }
+            .message-title {
+                font-size: 26px;
+            }
+            .message-text {
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1040,8 +1136,8 @@
     <!-- Ուղարկելու կոճակները իրար կողքի -->
     <div class="dual-button-wrapper">
         <!-- Ավելացրել ենք onclick="submitToPerson(...)" -->
-        <button type="button" class="btn-rsvp btn-send-sargis" onclick="submitToPerson('groom')">Ուղարկել Արշակին</button>
-        <button type="button" class="btn-rsvp btn-send-mane" onclick="submitToPerson('bride')">Ուղարկել Դիանային</button>
+        <button type="button" class="btn-rsvp btn-send-sargis" onclick="submitToPerson('groom')">Ուղարկել Էրիկին</button>
+        <button type="button" class="btn-rsvp btn-send-mane" onclick="submitToPerson('bride')">Ուղարկել Անահիտին</button>
     </div>
 
     <!-- Հաղորդագրությունների հատված -->
