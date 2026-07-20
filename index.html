@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation</title>
     <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding: 20px 10px 10px;
+            padding: 40px 20px 20px;
         }
         html, body {
             overflow-x: hidden;
@@ -50,21 +50,21 @@
             width: 100%;
             max-width: 400px;
             text-align: center;
-            padding: 20px 12px;
+            padding: 40px 30px;
             position: relative;
         }
         
         .big-date-header {
             font-family: 'Playfair Display', serif;
-            font-size: 2.6rem;
+            font-size: 3.2rem;
             font-weight: 400;
             color: #2c2c2c;
-            letter-spacing: 0.04em;
-            margin-bottom: 20px;
+            letter-spacing: 0.06em;
+            margin-bottom: 35px;
             line-height: 1;
         }
         .big-date-header .sep {
-            margin: 0 6px;
+            margin: 0 10px;
             font-weight: 300;
             color: #8a8a8a;
         }
@@ -72,27 +72,27 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 16px;
+            margin-bottom: 30px;
         }
         .name-script {
             font-family: 'Alex Brush', cursive;
-            font-size: 3.2rem;
+            font-size: 4.5rem;
             color: #2c2c2c;
             line-height: 1;
         }
         .name-script.groom {
             align-self: flex-start;
-            margin-left: 2%;
+            margin-left: 5%;
         }
         .name-script.bride {
             align-self: flex-end;
-            margin-right: 2%;
-            margin-top: -6px;
+            margin-right: 5%;
+            margin-top: -10px;
         }
         .and-text {
             font-family: 'Playfair Display', serif;
-            font-size: 0.7rem;
-            letter-spacing: 0.2em;
+            font-size: 0.75rem;
+            letter-spacing: 0.25em;
             text-transform: uppercase;
             color: #6a6a6a;
             align-self: center;
@@ -101,10 +101,10 @@
         
         .couple-photo {
             width: 100%;
-            height: 280px;
+            height: 420px;
             background: linear-gradient(135deg, #f0f0f0, #d0d0d0);
             border-radius: 8px;
-            margin-bottom: 24px;
+            margin-bottom: 50px;
             overflow: hidden;
             position: relative;
         }
@@ -117,7 +117,7 @@
             align-items: center;
             justify-content: center;
             color: #666;
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
         .photo-placeholder img {
             width: 100%;
@@ -130,15 +130,15 @@
         /* ═══ ENVELOPE ═══ */
         #envelope {
             position: relative;
-            width: 220px;
-            height: 140px;
-            border-bottom-left-radius: 4px;
-            border-bottom-right-radius: 4px;
+            width: 280px;
+            height: 180px;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
             margin-left: auto;
             margin-right: auto;
-            top: -60px;
+            top: -100px;
             background-color: #BEBEBE;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             cursor: pointer;
         }
         .front {
@@ -148,28 +148,28 @@
             z-index: 3;
         }
         .flap {
-            border-left: 110px solid transparent;
-            border-right: 110px solid transparent;
-            border-bottom: 62px solid transparent;
-            border-top: 78px solid #7D7D7D;
+            border-left: 140px solid transparent;
+            border-right: 140px solid transparent;
+            border-bottom: 82px solid transparent;
+            border-top: 98px solid #7D7D7D;
             transform-origin: top;
         }
         .pocket {
-            border-left: 110px solid #BEBEBE;
-            border-right: 110px solid #BEBEBE;
-            border-bottom: 70px solid #A9A9A9;
-            border-top: 70px solid transparent;
-            border-bottom-left-radius: 4px;
-            border-bottom-right-radius: 4px;
+            border-left: 140px solid #BEBEBE;
+            border-right: 140px solid #BEBEBE;
+            border-bottom: 90px solid #A9A9A9;
+            border-top: 90px solid transparent;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
         }
 
         /* ═══ ENVELOPE SEAL ═══ */
         .seal {
             position: absolute;
-            width: 44px;
-            height: 44px;
+            width: 58px;
+            height: 58px;
             border-radius: 50%;
-            top: 60px;
+            top: 76px;
             left: 50%;
             transform: translate(-50%, -50%);
             display: flex;
@@ -179,14 +179,14 @@
             cursor: pointer;
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
+        .seal:hover {
+            transform: translate(-50%, -50%) scale(1.06);
+        }
         .seal img {
             width: 100%;
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
-        }
-        .seal:hover {
-            transform: translate(-50%, -50%) scale(1.04);
         }
         .open .seal,
         .disappear .seal {
@@ -200,8 +200,8 @@
             width: 90%;
             height: 90%;
             margin: 5% auto;
-            border-radius: 4px;
-            box-shadow: 0 2px 18px rgba(0,0,0,0.10);
+            border-radius: 6px;
+            box-shadow: 0 2px 26px rgba(0,0,0,0.12);
         }
         .letter:after {
             content: '';
@@ -219,16 +219,16 @@
             transform: translate(-50%, -50%);
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             font-family: 'Vrdznagir', serif;
-            font-size: 14px;
+            font-size: 20px;
             font-style: italic;
             color: #222;
             white-space: nowrap;
         }
         .heart-outline {
-            width: 18px;
-            height: 18px;
+            width: 24px;
+            height: 24px;
             transform: rotate(10deg);
         }
         .open .flap {
@@ -250,7 +250,7 @@
         }
         
         .open .letter {
-            transform: translatey(-50px);
+            transform: translatey(-60px);
             transition: transform 0.4s 0.6s ease, z-index 0.6s;
             z-index: 2;
         }
@@ -259,11 +259,11 @@
             to { opacity: 0; transform: scale(0.9); }
         }
         .disappear {
-            animation: fadeOut 0.8s ease forwards;
+            animation: fadeOut 1s ease forwards;
         }
         
         .envelope-wrapper {
-            height: 260px;
+            height: 380px;
         }
         /* ═══ MAIN CONTENT ═══ */
         .content {
@@ -275,59 +275,58 @@
             display: block;
         }
 
-        /* ═══ MUSIC TOGGLE ═══ */
+        /* ═══ MUSIC TOGGLE (animated notes, site color palette) ═══ */
         .music-toggle {
             position: relative;
-            width: 44px;
-            height: 34px;
-            margin: -12px auto 6px;
+            width: 60px;
+            height: 46px;
+            margin: -18px auto 10px;
             cursor: pointer;
         }
         .music-toggle .float-note {
             position: absolute;
             top: 50%;
             left: 50%;
-            font-size: 11px;
+            font-size: 13px;
             color: #5c4a3a;
             opacity: 0;
             pointer-events: none;
-            text-shadow: 0 1px 2px rgba(92, 74, 58, 0.2);
+            text-shadow: 0 1px 2px rgba(92, 74, 58, 0.25);
         }
-        .music-toggle.playing .float-note.n1 { animation: floatNote1 2.4s ease-in-out infinite; }
-        .music-toggle.playing .float-note.n2 { animation: floatNote2 2.7s ease-in-out 0.8s infinite; }
-        .music-toggle.playing .float-note.n3 { animation: floatNote3 2.2s ease-in-out 1.5s infinite; }
+        .music-toggle.playing .float-note.n1 { animation: floatNote1 2.6s ease-in-out infinite; }
+        .music-toggle.playing .float-note.n2 { animation: floatNote2 2.9s ease-in-out 0.9s infinite; }
+        .music-toggle.playing .float-note.n3 { animation: floatNote3 2.4s ease-in-out 1.7s infinite; }
         @keyframes floatNote1 {
-            0%   { opacity: 0; transform: translate(-8px, 0px) rotate(-8deg) scale(0.7); }
+            0%   { opacity: 0; transform: translate(-10px, 0px) rotate(-8deg) scale(0.7); }
             18%  { opacity: 1; }
             75%  { opacity: 0.65; }
-            100% { opacity: 0; transform: translate(-26px, -48px) rotate(-22deg) scale(1.0); }
+            100% { opacity: 0; transform: translate(-30px, -58px) rotate(-22deg) scale(1.05); }
         }
         @keyframes floatNote2 {
             0%   { opacity: 0; transform: translate(0px, 2px) rotate(0deg) scale(0.7); }
             18%  { opacity: 1; }
             75%  { opacity: 0.65; }
-            100% { opacity: 0; transform: translate(2px, -50px) rotate(6deg) scale(1.0); }
+            100% { opacity: 0; transform: translate(2px, -60px) rotate(6deg) scale(1.05); }
         }
         @keyframes floatNote3 {
-            0%   { opacity: 0; transform: translate(6px, 0px) rotate(6deg) scale(0.7); }
+            0%   { opacity: 0; transform: translate(8px, 0px) rotate(6deg) scale(0.7); }
             18%  { opacity: 1; }
             75%  { opacity: 0.65; }
-            100% { opacity: 0; transform: translate(22px, -48px) rotate(18deg) scale(1.0); }
+            100% { opacity: 0; transform: translate(28px, -58px) rotate(18deg) scale(1.05); }
         }
 
         .image img {
-            width: 100%;
-            max-width: 240px;
-            height: auto;
+            width: 300px;
+            height: 200px;
             cursor: pointer;
-            margin-top: 4px;
+            margin-top: -10px;
         }
         /* ═══ LOCATION PATH ═══ */
         .location-wrapper {
             position: relative;
             width: 100%;
-            height: 480px;
-            margin-top: -30px;
+            height: 620px;
+            margin-top: -60px;
             overflow: visible;
         }
         .path-svg {
@@ -335,145 +334,159 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 480px;
+            height: 620px;
             overflow: visible;
         }
         .dotted-path {
             fill: none;
             stroke: #5c4a3a;
-            stroke-width: 2.5;
-            stroke-dasharray: 1, 12;
+            stroke-width: 3;
+            stroke-dasharray: 1, 14;
             stroke-linecap: round;
-            opacity: 0.7;
+            opacity: 0.75;
         }
         .location-traveler {
             position: absolute;
-            width: 32px;
-            height: 32px;
+            width: 40px;
+            height: 40px;
             pointer-events: none;
             z-index: 10;
-            filter: drop-shadow(0 2px 6px rgba(92, 74, 58, 0.4));
+            filter: drop-shadow(0 3px 8px rgba(92, 74, 58, 0.45));
             top: 0;
             left: 0;
         }
         .location-traveler svg {
-            width: 32px;
-            height: 32px;
+            width: 40px;
+            height: 40px;
         }
         .location-traveler.animate-path {
-            offset-path: path('M 200 8 C 300 8, 300 110, 200 118 C 100 126, 100 230, 200 238 C 300 246, 300 350, 200 358 C 100 366, 100 470, 200 480');
+            offset-path: path('M 200 10 C 320 10, 320 140, 200 150 C 80 160, 80 290, 200 300 C 320 310, 320 440, 200 450 C 80 460, 80 590, 200 610');
             offset-distance: 0%;
             offset-rotate: 0deg;
-            animation: travelPath 11s ease-in-out forwards;
-            animation-play-state: paused;
-        }
-        .location-traveler.animate-path.playing {
-            animation-play-state: running;
-        }
-        @keyframes travelPath {
-            0%   { offset-distance: 0%; }
-            8%   { offset-distance: 0%; }
-            33%  { offset-distance: 33%; }
-            41%  { offset-distance: 33%; }
-            58%  { offset-distance: 66%; }
-            66%  { offset-distance: 66%; }
-            83%  { offset-distance: 100%; }
-            100% { offset-distance: 100%; }
         }
         .schedule-item {
             position: absolute;
-            max-width: 120px;
-            opacity: 0;
-            transform: translateY(12px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-        .schedule-item.visible {
+            max-width: 160px;
             opacity: 1;
-            transform: translateY(0) !important;
+            transform: translateY(0);
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
         .schedule-item.left {
             text-align: right;
-            margin-top: 10px;
+            margin-top: 20px;
         }
         .schedule-item.right {
             text-align: left;
-            margin-top: 0%;
+            margin-top: 1%;
         }
         .s-time {
-            font-size: 28px;
+            font-size: 42px;
             font-family: 'HEGHNAR';
-            color: rgba(44, 44, 44, 0.10);
+            color: rgba(44, 44, 44, 0.12);
             font-weight: bold;
             line-height: 1;
             letter-spacing: 0.02em;
         }
         .s-title {
             font-family: 'Vrdznagir';
-            font-size: 16px;
+            font-size: 20px;
             font-weight: bold;
             color: #2c2c2c;
-            margin-top: 4px;
+            margin-top: 6px;
         }
         .s-desc {
             font-family: 'Vrdznagir', serif;
-            font-size: 10px;
+            font-size: 12px;
             color: #777;
-            margin: 2px 0 8px;
+            margin: 2px 0 10px;
             font-style: italic;
             text-align: center;
-            white-space: normal;
-            line-height: 1.3;
+            white-space: nowrap;
         }
         .stop-dot {
             position: absolute;
-            width: 10px;
-            height: 10px;
+            width: 12px;
+            height: 12px;
             background: #5c4a3a;
             border-radius: 50%;
             z-index: 5;
-            opacity: 0;
+            opacity: 1;
             transition: opacity 0.4s ease;
             transform: translate(-50%, -50%);
         }
-        .stop-dot.visible {
-            opacity: 1;
-        }
         .btn-nav {
             display: inline-block;
-            padding: 3px 10px;
+            padding: 5px 14px;
             border: 1px solid #b0a090;
             cursor: pointer;
-            font-size: 9px;
+            font-size: 10px;
             font-family: 'Vrdznagir';
             color: #5c4a3a;
             background-color: transparent;
-            border-radius: 16px;
+            border-radius: 20px;
             text-decoration: none;
             transition: all 0.3s;
-            letter-spacing: 0.04em;
+            letter-spacing: 0.05em;
         }
         .btn-nav:hover {
             background: #5c4a3a;
             color: white;
             border-color: #5c4a3a;
         }
-        #stop1 .s-title { white-space: nowrap; }
-        #stop1 .s-desc { text-align: center; margin-top: 2px; }
-        #stop1 .btn-nav { display: inline-block; margin-top: 4px; }
-        #stop2 { top: 110px !important; left: calc(50% + 8px) !important; }
-        #stop3 .s-title { white-space: nowrap; }
-        #stop3 .s-desc { text-align: center; margin-top: 2px; }
-        #stop3 .btn-nav { display: inline-block; margin-top: 4px; }
-        #stop4 { left: auto !important; right: calc(5% + 4px) !important; text-align: right; }
-        #stop4 .s-title { white-space: nowrap; }
-        #stop4 .s-desc { text-align: center; margin-top: 2px; }
-        #stop4 .btn-nav { display: inline-block; margin-top: 4px; }
+        #stop1 {
+            text-align: center;
+        }
+        #stop1 .s-title {
+            white-space: nowrap;
+        }
+        #stop1 .s-desc {
+            text-align: center;
+            margin-top: 4px;
+        }
+        #stop1 .btn-nav {
+            display: inline-block;
+            margin-top: 8px;
+        }
+        #stop2 {
+            top: 160px !important;
+            left: calc(50% + 5px) !important;
+        }
+        #stop3 {
+            text-align: center;
+        }
+        #stop3 .s-title {
+            white-space: nowrap;
+        }
+        #stop3 .s-desc {
+            text-align: center;
+            margin-top: 4px;
+        }
+        #stop3 .btn-nav {
+            display: inline-block;
+            margin-top: 8px;
+        }
+        #stop4 {
+            left: auto !important;
+            right: calc(8% + 4px) !important;
+            text-align: right;
+        }
+        #stop4 .s-title {
+            white-space: nowrap;
+        }
+        #stop4 .s-desc {
+            text-align: center;
+            margin-top: 4px;
+        }
+        #stop4 .btn-nav {
+            display: inline-block;
+            margin-top: 8px;
+        }
         /* ═══ COUPLE 2 PHOTO ═══ */
         .ketagic-bg {
             position: relative;
             width: 100%;
-            margin-top: 10px;
-            border-radius: 8px;
+            margin-top: 20px;
+            border-radius: 12px;
             overflow: hidden;
             z-index: 1;
         }
@@ -481,7 +494,7 @@
             width: 100%;
             height: auto;
             object-fit: contain;
-            border-radius: 8px;
+            border-radius: 12px;
             opacity: 0.85;
         }
 
@@ -491,53 +504,53 @@
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
-            margin-top: 20px;
-            padding-top: 6px;
+            margin-top: 40px;
+            padding-top: 10px;
         }
         .big-date {
-            font-size: 44px;
+            font-size: 60px;
             font-weight: 300;
-            color: rgba(0,0,0,0.08);
+            color: rgba(0,0,0,0.1);
             margin: 0;
             line-height: 1;
         }
         .month-text {
             font-family: 'Vrdznagir';
-            font-size: 22px;
+            font-size: 32px;
             font-style: italic;
             color: #333333;
-            margin-top: -4px;
-            margin-bottom: 16px;
+            margin-top: -6px;
+            margin-bottom: 28px;
         }
         table {
             border-collapse: separate;
-            border-spacing: 4px 6px;
+            border-spacing: 6px 8px;
             margin: 0 auto;
             text-align: center;
-            font-size: 14px;
+            font-size: 17px;
         }
         th {
             font-weight: 500;
-            padding: 2px 0 6px;
+            padding: 4px 0 10px;
             color: #8a8a8a;
-            font-size: 10px;
-            letter-spacing: 0.04em;
+            font-size: 12px;
+            letter-spacing: 0.06em;
             text-transform: uppercase;
         }
         td {
-            width: 30px;
-            height: 30px;
+            width: 38px;
+            height: 38px;
             padding: 0;
             color: #333;
             position: relative;
             vertical-align: middle;
         }
         .heart {
-            width: 30px;
-            height: 30px;
+            width: 38px;
+            height: 38px;
             position: absolute;
-            top: 70%;
-            left: 10%;
+            top: 74%;
+            left: 12%;
             transform: translate(-50%, -50%);
         }
         .heart svg {
@@ -552,33 +565,33 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 12px;
+            font-size: 15px;
             font-weight: 600;
             color: #2c3e50;
         }
         /* ═══ RSVP ═══ */
         #rsvpForm {
-            margin: 28px auto;
+            margin: 40px auto;
             width: 100%;
-            max-width: 280px;
+            max-width: 320px;
         }
 
         .name-fields {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
             align-items: center;
-            padding: 0 10px;
+            padding: 0 20px;
         }
 
         .name-input {
             width: 100%;
-            padding: 8px 14px;
-            font-size: 14px;
+            padding: 12px 16px;
+            font-size: 16px;
             color: #3B3B28;
             background-color: white;
             border: 1px solid #3B3B28;
-            border-radius: 20px;
+            border-radius: 25px;
             outline: none;
             transition: all 0.3s ease;
         }
@@ -591,10 +604,10 @@
         }
 
         .btn-rsvp {
-            font-size: 14px;
+            font-size: 18px;
             color: white;
-            padding: 8px 28px;
-            border-radius: 30px;
+            padding: 12px 45px;
+            border-radius: 40px;
             border: none;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -608,32 +621,32 @@
 
         .confirmation-message {
             position: fixed;
-            top: 100px;
+            top: 145px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1000;
-            font-size: 15px;
+            font-size: 18px;
             color: #4c4731;
             text-align: center;
             opacity: 0;
             transition: all 0.5s ease;
             background-color: rgba(255, 255, 255, 0.95);
-            padding: 16px 24px;
-            border-radius: 16px;
+            padding: 20px 30px;
+            border-radius: 20px;
             border: 1px solid #4c4731;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-            backdrop-filter: blur(8px);
-            max-width: 300px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+            max-width: 350px;
             pointer-events: none;
         }
 
         .confirmation-message.show {
             opacity: 1;
-            animation: slideInFromTop 0.5s ease-out;
+            animation: slideInFromTop 0.6s ease-out;
         }
 
         .confirmation-message.hide {
-            animation: slideOutToTop 0.4s ease-in;
+            animation: slideOutToTop 0.5s ease-in;
         }
 
         .error-message {
@@ -643,26 +656,26 @@
         }
 
         @keyframes slideInFromTop {
-            from { opacity: 0; transform: translateX(-50%) translateY(-80px); }
+            from { opacity: 0; transform: translateX(-50%) translateY(-100px); }
             to   { opacity: 1; transform: translateX(-50%) translateY(0); }
         }
 
         @keyframes slideOutToTop {
             from { opacity: 1; transform: translateX(-50%) translateY(0); }
-            to   { opacity: 0; transform: translateX(-50%) translateY(-80px); }
+            to   { opacity: 0; transform: translateX(-50%) translateY(-100px); }
         }
 
         .message-title {
             font-family: 'Vrdznagir', sans-serif;
-            font-size: 18px;
-            margin-bottom: 4px;
+            font-size: 22px;
+            margin-bottom: 8px;
             color: #4c4731;
         }
 
         .message-text {
             font-family: 'Vrdznagir', sans-serif;
-            font-size: 14px;
-            line-height: 1.3;
+            font-size: 16px;
+            line-height: 1.4;
         }
 
         .rsvp-select {
@@ -675,17 +688,17 @@
         .dual-button-wrapper {
             display: flex;
             justify-content: space-between;
-            gap: 6px;
-            margin-top: 10px;
+            gap: 8px;
+            margin-top: 15px;
             width: 100%;
         }
 
         .dual-button-wrapper .btn-rsvp {
             flex: 1;
-            padding: 8px 2px;
-            font-size: 11px;
+            padding: 12px 2px;
+            font-size: 13px;
             white-space: nowrap;
-            letter-spacing: -0.3px;
+            letter-spacing: -0.5px;
             cursor: pointer;
             text-align: center;
             border: 1px solid #ccc;
@@ -694,103 +707,106 @@
             transition: all 0.3s ease;
         }
 
-        /* ═══ MOBILE SMALL ═══ */
-        @media (max-width: 480px) {
-            .invitation-card { padding: 12px 6px; max-width: 100%; }
-            .big-date-header { font-size: 2.2rem; margin-bottom: 14px; }
-            .big-date-header .sep { margin: 0 4px; font-size: 2rem; }
-            .name-script { font-size: 2.8rem; }
-            .name-script.groom { margin-left: 0%; align-self: center; }
-            .name-script.bride { margin-right: 0%; margin-top: -4px; align-self: center; }
-            .and-text { font-size: 0.65rem; letter-spacing: 0.3em; margin: 4px 0; }
-            .couple-photo { height: 200px; margin-bottom: 14px; border-radius: 6px; }
-            #envelope { width: 180px; height: 115px; top: -48px; }
-            .flap { border-left: 90px solid transparent; border-right: 90px solid transparent; border-bottom: 50px solid transparent; border-top: 64px solid #7D7D7D; }
-            .pocket { border-left: 90px solid #BEBEBE; border-right: 90px solid #BEBEBE; border-bottom: 58px solid #A9A9A9; border-top: 58px solid transparent; }
-            .seal { width: 36px; height: 36px; top: 48px; }
-            .closing-text { font-size: 11px; gap: 4px; }
-            .heart-outline { width: 14px; height: 14px; }
-            .envelope-wrapper { height: 200px; }
-            .music-toggle { width: 36px; height: 28px; margin: -8px auto 4px; }
-            .music-toggle .float-note { font-size: 9px; }
-            .image img { max-width: 180px; }
-            .location-wrapper { height: 380px; margin-top: -20px; }
-            .path-svg { height: 380px; }
-            .location-traveler { width: 26px; height: 26px; }
-            .location-traveler svg { width: 26px; height: 26px; }
-            .schedule-item { max-width: 100px; }
-            .s-time { font-size: 22px; }
-            .s-title { font-size: 13px; margin-top: 2px; }
-            .s-desc { font-size: 9px; margin: 1px 0 4px; }
-            .btn-nav { font-size: 8px; padding: 2px 8px; border-radius: 12px; }
-            #stop1 { top: -6px !important; right: calc(50% + 16px) !important; }
-            #stop2 { top: 90px !important; left: calc(50% + 16px) !important; }
-            #stop3 { top: 190px !important; right: calc(50% + 16px) !important; }
-            #stop4 { top: 290px !important; right: calc(2% + 4px) !important; }
-            .stop-dot { width: 8px; height: 8px; }
-            #dot1 { top: 8px !important; }
-            #dot2 { top: 110px !important; }
-            #dot3 { top: 230px !important; }
-            #dot4 { top: 350px !important; }
-            .ketagic-bg { margin-top: 8px; border-radius: 6px; }
-            .ketagic-bg img { border-radius: 6px; }
-            .calendar-container { margin-top: 16px; padding-top: 4px; }
-            .big-date { font-size: 36px; }
-            .month-text { font-size: 18px; margin-top: -2px; margin-bottom: 12px; }
-            table { font-size: 12px; border-spacing: 3px 4px; }
-            th { font-size: 8px; padding: 2px 0 4px; }
-            td { width: 24px; height: 24px; }
-            .heart { width: 24px; height: 24px; top: 68%; left: 8%; }
-            .heart span { font-size: 10px; }
-            #rsvpForm { margin: 20px auto; max-width: 100%; padding: 0 6px; }
-            .name-fields { gap: 8px; padding: 0 4px; }
-            .name-input { font-size: 13px; padding: 6px 12px; border-radius: 16px; }
-            .rsvp-select { font-size: 13px; padding: 6px 12px; }
-            .dual-button-wrapper { gap: 6px; margin-top: 8px; flex-direction: row; }
-            .dual-button-wrapper .btn-rsvp { font-size: 10px; padding: 6px 2px; border-radius: 20px; }
-            .confirmation-message { max-width: 90%; font-size: 14px; padding: 14px 18px; top: 80px; border-radius: 16px; }
-            .message-title { font-size: 16px; }
-            .message-text { font-size: 13px; }
+        @media (max-width: 360px) {
+            .dual-button-wrapper .btn-rsvp {
+                font-size: 11px;
+            }
         }
 
-        @media (max-width: 380px) {
-            .big-date-header { font-size: 1.8rem; }
-            .name-script { font-size: 2.2rem; }
-            .couple-photo { height: 160px; }
-            #envelope { width: 150px; height: 100px; top: -40px; }
-            .flap { border-left: 75px solid transparent; border-right: 75px solid transparent; border-top: 54px solid #7D7D7D; border-bottom: 42px solid transparent; }
-            .pocket { border-left: 75px solid #BEBEBE; border-right: 75px solid #BEBEBE; border-bottom: 50px solid #A9A9A9; border-top: 50px solid transparent; }
-            .seal { width: 30px; height: 30px; top: 40px; }
-            .closing-text { font-size: 9px; }
-            .heart-outline { width: 12px; height: 12px; }
-            .envelope-wrapper { height: 160px; }
-            .image img { max-width: 150px; }
-            .location-wrapper { height: 320px; }
-            .path-svg { height: 320px; }
-            .s-time { font-size: 18px; }
-            .s-title { font-size: 11px; }
-            .s-desc { font-size: 8px; }
-            .btn-nav { font-size: 7px; padding: 1px 6px; }
-            #stop1 { top: -4px !important; right: calc(50% + 10px) !important; }
-            #stop2 { top: 70px !important; left: calc(50% + 10px) !important; }
-            #stop3 { top: 150px !important; right: calc(50% + 10px) !important; }
-            #stop4 { top: 230px !important; right: calc(1% + 2px) !important; }
-            .stop-dot { width: 6px; height: 6px; }
-            #dot1 { top: 6px !important; }
-            #dot2 { top: 90px !important; }
-            #dot3 { top: 190px !important; }
-            #dot4 { top: 290px !important; }
-            .big-date { font-size: 30px; }
-            .month-text { font-size: 15px; }
-            table { font-size: 10px; border-spacing: 2px 3px; }
-            td { width: 20px; height: 20px; }
-            .heart { width: 20px; height: 20px; top: 66%; left: 6%; }
-            .heart span { font-size: 8px; }
-            .name-input { font-size: 11px; padding: 5px 10px; }
-            .dual-button-wrapper .btn-rsvp { font-size: 9px; padding: 4px 2px; }
-            .confirmation-message { font-size: 12px; padding: 12px 14px; top: 60px; }
-            .message-title { font-size: 14px; }
-            .message-text { font-size: 11px; }
+        /* ═══ MOBILE ENLARGEMENTS ═══ */
+        @media (max-width: 480px) {
+            .invitation-card {
+                padding: 30px 15px;
+            }
+            .big-date-header {
+                font-size: 4rem;
+            }
+            .couple-photo {
+                height: 360px;
+            }
+            .name-script {
+                font-size: 5.5rem;
+            }
+            .and-text {
+                font-size: 1rem;
+            }
+            .image img {
+                width: 100%;
+                height: auto;
+                max-height: 260px;
+                object-fit: contain;
+            }
+            .location-wrapper {
+                height: 700px;
+            }
+            .schedule-item {
+                max-width: 180px;
+            }
+            .s-title {
+                font-size: 22px;
+            }
+            .s-desc {
+                font-size: 14px;
+                white-space: normal;
+            }
+            .s-time {
+                font-size: 48px;
+            }
+            .btn-nav {
+                font-size: 12px;
+                padding: 6px 18px;
+            }
+            .ketagic-bg img {
+                width: 100%;
+                height: auto;
+            }
+            .calendar-container {
+                margin-top: 50px;
+            }
+            .big-date {
+                font-size: 72px;
+            }
+            .month-text {
+                font-size: 38px;
+            }
+            table {
+                font-size: 20px;
+                border-spacing: 8px 10px;
+            }
+            td {
+                width: 44px;
+                height: 44px;
+            }
+            .heart {
+                width: 44px;
+                height: 44px;
+            }
+            .heart span {
+                font-size: 18px;
+            }
+            #rsvpForm {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+            .name-input {
+                font-size: 18px;
+                padding: 14px 18px;
+            }
+            .dual-button-wrapper .btn-rsvp {
+                font-size: 15px;
+                padding: 14px 4px;
+            }
+            .confirmation-message {
+                max-width: 90%;
+                font-size: 20px;
+                padding: 24px 20px;
+            }
+            .message-title {
+                font-size: 26px;
+            }
+            .message-text {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
@@ -806,7 +822,7 @@
         
         <div class="couple-photo">
             <div class="photo-placeholder">
-                <img src="https://uploads.onecompiler.io/43gpeysj6/1784532945296/z1.jfif" alt="Erik & Anahit">
+                <img src="https://uploads.onecompiler.io/43gpeysj6/1784532945296/z1.jfif">
             </div>
         </div>
         
@@ -828,7 +844,7 @@
             </div>
         </div>
         <div class="content" id="content">
-            <!-- ═══ Music toggle ═══ -->
+            <!-- ═══ Music toggle: animated notes, colored to match the site palette ═══ -->
             <div id="music-btn" class="music-toggle">
                 <span class="float-note n1">&#9834;</span>
                 <span class="float-note n2">&#9835;</span>
@@ -840,21 +856,21 @@
             </div>
             <!-- ═══ ANIMATED LOCATION PATH ═══ -->
             <div class="location-wrapper" id="locationWrapper">
-                <svg class="path-svg" id="pathSvg" viewBox="0 0 400 480" preserveAspectRatio="none">
+                <svg class="path-svg" id="pathSvg" viewBox="0 0 400 620" preserveAspectRatio="none">
                     <path
                        id="travelPath"
                        class="dotted-path"
-                       d="M 200 8
-                          C 300 8, 300 110, 200 118
-                          C 100 126, 100 230, 200 238
-                          C 300 246, 300 350, 200 358
-                          C 100 366, 100 470, 200 480"
+                       d="M 200 10
+                          C 320 10, 320 140, 200 150
+                          C 80 160, 80 290, 200 300
+                          C 320 310, 320 440, 200 450
+                          C 80 460, 80 590, 200 630"
                     />
                 </svg>
-                <div class="stop-dot" id="dot1" style="left:50%; top:8px;"></div>
-                <div class="stop-dot" id="dot2" style="left:30%; top:138px;"></div>
-                <div class="stop-dot" id="dot3" style="left:75%; top:280px;"></div>
-                <div class="stop-dot" id="dot4" style="left:25%; top:420px;"></div>
+                <div class="stop-dot" id="dot1" style="left:50%; top:10px;"></div>
+                <div class="stop-dot" id="dot2" style="left:30%; top:175px;"></div>
+                <div class="stop-dot" id="dot3" style="left:75%; top:370px;"></div>
+                <div class="stop-dot" id="dot4" style="left:25%; top:530px;"></div>
                 <div class="location-traveler animate-path" id="locationIcon">
                     <svg viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 1C7.029 1 3 5.029 3 10c0 7 9 19 9 19s9-12 9-19c0-4.971-4.029-9-9-9z"
@@ -862,18 +878,18 @@
                         <circle cx="12" cy="10" r="4" fill="#e8e0d6"/>
                     </svg>
                 </div>
-                <div class="schedule-item left" id="stop1" style="top: -6px; right: calc(50% + 16px);">
+                <div class="schedule-item left" id="stop1" style="top: -10px; right: calc(50% + 18px);">
                     <div class="s-time">10:00</div>
                     <div class="s-title">Փեսայի Տուն</div>
                 </div>
-                <div class="schedule-item right" id="stop2" style="top: 100px; left: calc(50% + 16px);">
+                <div class="schedule-item right" id="stop2" style="top: 130px; left: calc(50% + 18px);">
                     <div class="s-time">11:00</div>
                     <div class="s-title">Հարսի Տուն</div>
                 </div>
-                <div class="schedule-item left" id="stop3" style="top: 220px; right: calc(50% + 16px);">
+                <div class="schedule-item left" id="stop3" style="top: 295px; right: calc(50% + 18px);">
                     <div class="s-time">15:30</div>
                     <div class="s-title">Պսակադրություն</div>
-                    <div class="s-desc">Աբովյանի Սուրբ Հովհաննես</div>
+                    <div class="s-desc">Աբովյանի Սուրբ Հովհաննես եկեղեցի</div>
                     <a href="https://maps.app.goo.gl/di51KSFwAUeEy49e8"
                        class="btn-nav"
                        target="_blank"
@@ -881,10 +897,10 @@
                        Ինչպես հասնել
                     </a>
                 </div>
-                <div class="schedule-item right" id="stop4" style="top: 340px; left: calc(50% + 16px);">
+                <div class="schedule-item right" id="stop4" style="top: 440px; left: calc(50% + 18px);">
                     <div class="s-time">17:00</div>
                     <div class="s-title">Տոնական Խնջույք</div>
-                    <div class="s-desc">Palladium Hall</div>
+                    <div class="s-desc"> Palladium Hall </div>
                     <a href="https://maps.app.goo.gl/KAay2M3SKmpipk6w5"
                        class="btn-nav"
                        target="_blank"
@@ -1010,12 +1026,14 @@
                     musicBtn.classList.add('playing');
                     music.play().catch(function (err) {
                         console.warn('Autoplay blocked:', err);
+                        // Եթե autoplay-ն արգելափակված է, օգտատերը կարող է միացնել կոճակով
                     });
                 }
             }
 
             function openEnvelope() {
                 if (envelope.classList.contains('close')) {
+                    // ═══ ԵՐԱԺՇՏՈՒԹՅՈՒՆԸ ՄԻԱՑՆԵԼ ԱՆՄԻՋԱՊԵՍ ═══
                     startMusic();
 
                     envelope.classList.remove('close');
@@ -1023,22 +1041,24 @@
                     setTimeout(function () {
                         envelope.classList.add('disappear');
                         content.classList.add('show');
-                        setTimeout(initScrollAnimations, 300);
                         setTimeout(function () {
                             document.querySelector('.envelope-wrapper').style.display = 'none';
-                        }, 900);
-                    }, 2000);
+                        }, 1000);
+                    }, 2500);
                 }
             }
 
+            // Կնիքին սեղմելը բացում է ծրարը և միացնում երաժշտությունը
             if (seal) {
                 seal.addEventListener('click', function (e) {
                     e.stopPropagation();
                     openEnvelope();
                 });
             }
+            // Ամբողջ ծրարին սեղմելը
             envelope.addEventListener('click', openEnvelope);
 
+            // Music button — play / pause toggle (animated notes)
             if (musicBtn) {
                 musicBtn.addEventListener('click', function () {
                     if (isPlaying) {
@@ -1054,94 +1074,73 @@
             }
         });
 
-        /* ═══ SCROLL ANIMATIONS ═══ */
-        function initScrollAnimations() {
-            const wrapper = document.getElementById('locationWrapper');
-            const icon = document.getElementById('locationIcon');
-            const wrapperObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        icon.classList.add('playing');
-                        const delays = [200, 3500, 6000, 8500];
-                        const items = ['stop1', 'stop2', 'stop3', 'stop4'];
-                        const dots  = ['dot1',  'dot2',  'dot3',  'dot4'];
-                        items.forEach((id, i) => {
-                            setTimeout(() => {
-                                document.getElementById(id).classList.add('visible');
-                                document.getElementById(dots[i]).classList.add('visible');
-                            }, delays[i]);
-                        });
-                        wrapperObserver.unobserve(entry.target);
-                    }
+        /* ═══ RSVP ═══ */
+        (function () {
+            const FORM = document.getElementById('rsvpForm');
+            const OK   = document.getElementById('successMessage');
+            const ERR  = document.getElementById('errorMessage');
+            const ENDPOINT = "https://script.google.com/macros/s/AKfycbxSnkdWLcndjsNKtSctKWD7vfNlTLmXN1OhvJR6BctU9_6BVDjGoPiSjbaQ6f6il17l/exec";
+
+            function showMsg(el, html) {
+                [OK, ERR].forEach(m => {
+                    m.style.display = 'none';
+                    m.classList.remove('show', 'hide');
                 });
-            }, { threshold: 0.1 });
-            if (wrapper) wrapperObserver.observe(wrapper);
-        }
-/* ═══ RSVP ═══ */
-(function () {
-    const FORM = document.getElementById('rsvpForm');
-    const OK   = document.getElementById('successMessage');
-    const ERR  = document.getElementById('errorMessage');
-    const ENDPOINT = "https://script.google.com/macros/s/AKfycbxSnkdWLcndjsNKtSctKWD7vfNlTLmXN1OhvJR6BctU9_6BVDjGoPiSjbaQ6f6il17l/exec";
+                el.innerHTML = html;
+                el.style.display = 'block';
+                setTimeout(() => el.classList.add('show'), 10);
+                setTimeout(() => {
+                    el.classList.add('hide');
+                    setTimeout(() => {
+                        el.style.display = 'none';
+                        el.classList.remove('show', 'hide');
+                    }, 500);
+                }, 5000); // Մի փոքր երկարացրի, որ հասցնեն կարդալ
+            }
 
-    function showMsg(el, html) {
-        [OK, ERR].forEach(m => {
-            m.style.display = 'none';
-            m.classList.remove('show', 'hide');
-        });
-        el.innerHTML = html;
-        el.style.display = 'block';
-        setTimeout(() => el.classList.add('show'), 10);
-        setTimeout(() => {
-            el.classList.add('hide');
-            setTimeout(() => {
-                el.style.display = 'none';
-                el.classList.remove('show', 'hide');
-            }, 400);
-        }, 4000);
-    }
+            // Սա այն ֆունկցիան է, որը պետք է կանչել կոճակների onclick-ի ժամանակ
+            window.submitToPerson = function (target) {
+                const first = (FORM.querySelector('[name="firstName"]').value || '').trim();
+                const last  = (FORM.querySelector('[name="lastName"]').value || '').trim();
+                const guests = (FORM.querySelector('[name="guests"]').value || '').trim();
+                const resp = (FORM.querySelector('[name="response"]').value || '').trim();
 
-    window.submitToPerson = function (target) {
-        const first = (FORM.querySelector('[name="firstName"]').value || '').trim();
-        const last  = (FORM.querySelector('[name="lastName"]').value || '').trim();
-        const guests = (FORM.querySelector('[name="guests"]').value || '').trim();
-        const resp = (FORM.querySelector('[name="response"]').value || '').trim();
+                if (!first || !last) {
+                    showMsg(ERR, '<div class="message-title">Սխալ</div><div class="message-text">Խնդրում ենք լրացնել անունը և ազգանունը</div>');
+                    return;
+                }
 
-        if (!first || !last) {
-            showMsg(ERR, '<div class="message-title">Սխալ</div><div class="message-text">Խնդրում ենք լրացնել անունը և ազգանունը</div>');
-            return;
-        }
+                if (!guests || guests < 1) {
+                    showMsg(ERR, '<div class="message-title">Սխալ</div><div class="message-text">Նշեք հյուրերի քանակը</div>');
+                    return;
+                }
 
-        if (!guests || guests < 1) {
-            showMsg(ERR, '<div class="message-title">Սխալ</div><div class="message-text">Նշեք հյուրերի քանակը</div>');
-            return;
-        }
+                const params = new URLSearchParams();
+                params.append('firstName', first);
+                params.append('lastName', last);
+                params.append('response', resp);
+                params.append('guests', guests);
+                params.append('target', target); // Սարգիս կամ Մանե
+                params.append('timestamp', new Date().toISOString());
 
-        const params = new URLSearchParams();
-        params.append('firstName', first);
-        params.append('lastName', last);
-        params.append('response', resp);
-        params.append('guests', guests);
-        params.append('target', target);
-        params.append('timestamp', new Date().toISOString());
+                fetch(ENDPOINT, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: params.toString()
+                }).catch(err => console.error('RSVP error:', err));
 
-        fetch(ENDPOINT, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: params.toString()
-        }).catch(err => console.error('RSVP error:', err));
+                // Պատասխան հաղորդագրությունը ըստ ընտրված մարդու
+                const personName = (target === 'groom') ? 'Էրիկ' : 'Անահիտ';
+                
+                showMsg(
+                    OK,
+                    `<div class="message-text">Շնորհակալ եմ, ես ստացել եմ Ձեր պատասխանը:<br>Սիրով՝ ${personName}</div>`
+                );
 
-        const personName = (target === 'groom') ? 'Էրիկ' : 'Անահիտ';
-        showMsg(
-            OK,
-            `<div class="message-text">Շնորհակալ եմ, ես ստացել եմ Ձեր պատասխանը:<br>Սիրով՝ ${personName}</div>`
-        );
-
-        FORM.reset();
-    };
-})();
-     
+                FORM.reset();
+            };
+        })();
     </script>
 </body>
 </html>
